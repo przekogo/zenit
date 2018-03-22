@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Cormorant+Garamond:400,700);
+/* line 3, /mnt/d/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+body {
+  font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 9, /mnt/d/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+b,
+strong {
+  font-weight: 700;
+}
+
+/* line 14, /mnt/d/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 1, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase {
+  width: 100%;
+}
+/* line 3, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box {
+  position: relative;
+  float: left;
+  margin: 1%;
+  padding: 0;
+  width: 18%;
+  transition: all 0.5s ease;
+  text-align: center;
+  font-size: 58px;
+  color: #fff;
+}
+/* line 13, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box:hover {
+  cursor: pointer;
+}
+/* line 17, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lily:hover {
+  box-shadow: 0px 0px 5px 2px #80ffff;
+  text-shadow: 0px 0px 8px #80ffff;
+}
+/* line 23, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.rose:hover {
+  box-shadow: 0px 0px 5px 2px red;
+  text-shadow: 0px 0px 8px red;
+}
+/* line 29, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.orchid:hover {
+  box-shadow: 0px 0px 5px 2px gold;
+  text-shadow: 0px 0px 8px gold;
+}
+/* line 35, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.iris:hover {
+  box-shadow: 0px 0px 5px 2px violet;
+  text-shadow: 0px 0px 8px violet;
+}
+/* line 41, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lotus:hover {
+  box-shadow: 0px 0px 5px 2px blue;
+  text-shadow: 0px 0px 8px blue;
+}
+/* line 46, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box img {
+  width: 100%;
+}
+/* line 49, /mnt/d/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box p {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 5px black;
+}
+
+/* line 1, /mnt/d/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider {
+  position: relative;
+  z-index: -1;
+}
+/* line 4, /mnt/d/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider__image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 4s ease;
+}
+/* line 10, /mnt/d/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider__image.active {
+  position: relative;
+  opacity: 1;
+}
+
+/* line 1, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  line-height: 70px;
+  font-size: 44px;
+  text-align: center;
+}
+/* line 8, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button {
+  float: left;
+  width: 19%;
+  height: 70px;
+  background: url("marble.jpg") no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 2px black solid;
+  transition: all 0.5s ease;
+}
+/* line 16, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button.highlight {
+  float: left;
+  width: 24%;
+  height: 100px;
+  position: relative;
+  font-weight: bold;
+}
+/* line 22, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button.highlight p {
+  position: absolute;
+  top: 23px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 30px;
+}
+/* line 31, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 4px #80ffff;
+  box-shadow: inset 10px 40px 90px -60px #80ffff;
+  color: #006666;
+}
+/* line 38, /mnt/d/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__logo {
+  position: relative;
+  top: 100%;
+  width: 80%;
+  height: 120px;
+  margin: 0 0 0 10%;
+  border-radius: 0 0 50% 50%;
+  background: url("marble.jpg") no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 2px black solid;
+}
+
+/* line 1, /mnt/d/projects/zenit/app/assets/stylesheets/main.scss */
+body {
+  margin: 0;
+}
