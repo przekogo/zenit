@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Cormorant+Garamond:400,700);
+
+body {
+  font-family: $ff-base;
+  font-size: $fs-base;
+  -webkit-font-smoothing: antialiased;
+}
+
+b,
+strong {
+  font-weight: $fw-bold;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $ff-base;
+}

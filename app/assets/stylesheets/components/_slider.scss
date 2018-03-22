@@ -1,0 +1,15 @@
+.zen-slider {
+  position: relative;
+  z-index: -1;
+  &__image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 4s ease;
+    &.active {
+      position: relative;
+      opacity: 1;
+    }
+  }
+}

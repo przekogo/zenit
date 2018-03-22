@@ -1,0 +1,6 @@
+/* line 1, /mnt/d/projects/zenit/app/assets/stylesheets/components/_segment.scss */
+.zen-segment {
+  width: 100%;
+  min-height: 150px;
+  background: red;
+}
