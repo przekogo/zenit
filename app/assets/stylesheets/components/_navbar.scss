@@ -39,11 +39,14 @@
     position: relative;
     top: 100%;
     width: 80%;
-    height: 120px;
+    height: 200px;
     margin: 0 0 0 10%;
     border-radius: 0 0 50% 50%;
     background: url('marble.jpg') no-repeat fixed;
     background-size: 100%;
     border-bottom: 2px black solid;
+    img {
+      width: 200px;
+    }
   }
 }
