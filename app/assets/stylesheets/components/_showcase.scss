@@ -3,13 +3,14 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background: url('marble.jpg') no-repeat;
+  background: url('black-marble.jpg') no-repeat;
   background-size: cover;
 
   h2 {
     margin-top: 10px;
     width: 100%;
-    text-shadow: -2px -2px 0px #fff;
+    color: #ddc;
+    text-shadow: -2px -2px 0px rgba(255, 255, 255, 0.3);
   }
 
   &__box {
@@ -21,8 +22,23 @@
     font-size: $fs-title;
     color: #fff;
 
+    &::before {
+      margin: 10px;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: inset 0 0 50px 10px #000;
+      transition: all 0.5s ease;
+    }
+
     &:hover {
       cursor: pointer;
+      &::before {
+        box-shadow: inset 0 0 25px 0px #000;
+      }
     }
 
     img {
@@ -46,8 +62,7 @@
         left: 0;
       }
       &:hover img {
-        box-shadow: 0px 0px 5px 2px #80ffff;
-        text-shadow: 0px 0px 8px #80ffff;
+        box-shadow: 0px 0px 50px 8px #99ddff;
       }
     }
 
@@ -60,8 +75,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 5px 2px red;
-        text-shadow: 0px 0px 8px red;
+        box-shadow: 0px 0px 50px 10px #990000;
       }
     }
 
@@ -73,8 +87,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 5px 2px gold;
-        text-shadow: 0px 0px 8px gold;
+        box-shadow: 0px 0px 50px 10px #e6ac00;
       }
     }
 
@@ -86,8 +99,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 5px 2px violet;
-        text-shadow: 0px 0px 8px violet;
+        box-shadow: 0px 0px 50px 10px #b366ff;
       }
     }
 
@@ -99,8 +111,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 5px 2px blue;
-        text-shadow: 0px 0px 8px blue;
+        box-shadow: 0px 0px 50px 10px #0000b3;
       }
     }
   }
