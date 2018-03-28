@@ -18,3 +18,9 @@ select,
 textarea {
   font-family: $ff-base;
 }
+
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: $fs-title;
+}

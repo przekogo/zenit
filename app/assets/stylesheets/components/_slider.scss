@@ -2,6 +2,7 @@
   position: relative;
   z-index: -1;
   &__image {
+    display: block;
     position: absolute;
     top: 0;
     width: 100%;
