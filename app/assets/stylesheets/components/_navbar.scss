@@ -5,6 +5,7 @@
   line-height: 70px;
   font-size: $fs-header-lg;
   text-align: center;
+  transition: all 0.5s ease;
   &__button {
     float: left;
     width: 19%;
@@ -26,6 +27,7 @@
         padding: 0;
         width: 100%;
         line-height: 30px;
+        z-index: 1;
       }
     }
     &:hover {
@@ -37,6 +39,7 @@
   }
   &__logo {
     position: relative;
+    z-index: 0;
     top: 100%;
     width: 80%;
     height: 200px;
@@ -45,8 +48,20 @@
     background: url('marble.jpg') no-repeat fixed;
     background-size: 100%;
     border-bottom: 2px black solid;
+    transition: all 0.5s ease;
     img {
       width: 200px;
+      transition: all 0.5s ease;
+    }
+  }
+  &.compacted {
+    top: 0px;
+  }
+  &.compacted &__logo {
+    top: 50%;
+    height: 100px;
+    img {
+      opacity: 0;
     }
   }
 }
