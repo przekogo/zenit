@@ -3,23 +3,37 @@
   top: 50px;
   width: 100%;
   line-height: 70px;
-  font-size: $fs-header-lg;
+  font-size: $fs-header-sm;
   text-align: center;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
+  z-index: 1;
+
+  @media #{$lg-up} {
+    font-size: $fs-header-lg;
+  }
+
   &__button {
     float: left;
     width: 19%;
     height: 70px;
     background: url('marble.jpg') no-repeat fixed;
     background-size: 100%;
-    border-bottom: 2px black solid;
-    transition: all 0.5s ease;
+    border-bottom: 2px $color-black solid;
+    transition: all .5s ease;
+    text-decoration: none;
+    color: $color-black;
+
     &.highlight {
       float: left;
       width: 24%;
-      height: 100px;
+      height: 80px;
       position: relative;
       font-weight: bold;
+
+      @media #{$lg-up} {
+        height: 100px;
+      }
+
       p {
         position: absolute;
         top: 23px;
@@ -30,36 +44,61 @@
         z-index: 1;
       }
     }
+
+    &.active {
+      text-shadow: 0 0 4px $color-highlight;
+      color: #006666;
+    }
+
     &:hover {
       cursor: pointer;
-      text-shadow: 0px 0px 4px #80ffff;
-      box-shadow: inset 10px 40px 90px -60px #80ffff;
+      text-shadow: 0 0 4px $color-highlight;
+      box-shadow: inset 10px 40px 90px -60px $color-highlight;
       color: #006666;
     }
   }
+
   &__logo {
     position: relative;
     z-index: 0;
     top: 100%;
     width: 80%;
-    height: 200px;
+    height: 130px;
     margin: 0 0 0 10%;
     border-radius: 0 0 50% 50%;
     background: url('marble.jpg') no-repeat fixed;
     background-size: 100%;
-    border-bottom: 2px black solid;
-    transition: all 0.5s ease;
+    border-bottom: 2px $color-black solid;
+    transition: all .5s ease;
+
+    @media #{$lg-up} {
+      height: 170px;
+    }
+
     img {
-      width: 200px;
-      transition: all 0.5s ease;
+      margin-top: 10px;
+      width: 115px;
+      transition: all .5s ease;
+
+    @media #{$lg-up} {
+      margin-top: 15px;
+      width: 150px;
+    }
     }
   }
+
   &.compacted {
-    top: 0px;
+    top: 0;
   }
+
   &.compacted &__logo {
     top: 50%;
-    height: 100px;
+    height: 75px;
+
+    @media #{$lg-up} {
+      height: 100px;
+    }
+
     img {
       opacity: 0;
     }

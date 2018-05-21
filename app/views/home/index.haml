@@ -1,16 +1,4 @@
-.zen-header
-
-.zen-navbar.js-navbar
-  .zen-navbar__button Historia
-  .zen-navbar__button O nas
-  .zen-navbar__button.highlight
-    %p
-      Powierzchnie do
-      %br wynajęcia
-    .zen-navbar__logo
-      %img{src: 'assets/logo.png'}
-  .zen-navbar__button Inwestycja
-  .zen-navbar__button Kontakt
+=render partial: 'layouts/navbar', locals: {location: 'home'}
 .zen-slider.js-slider
   %img.zen-slider__image.js-slide{src: 'assets/zenit-1.jpg'}
   %img.zen-slider__image.js-slide{src: 'assets/zenit-2.jpg'}

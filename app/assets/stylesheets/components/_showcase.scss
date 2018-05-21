@@ -10,7 +10,7 @@
     margin-top: 10px;
     width: 100%;
     color: #ddc;
-    text-shadow: -2px -2px 0px rgba(255, 255, 255, 0.3);
+    text-shadow: -2px -2px 0 rgba(255, 255, 255, 0.3);
   }
 
   &__box {
@@ -24,7 +24,7 @@
 
     &::before {
       margin: 10px;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       bottom: 0;
@@ -37,7 +37,7 @@
     &:hover {
       cursor: pointer;
       &::before {
-        box-shadow: inset 0 0 25px 0px #000;
+        box-shadow: inset 0 0 25px 0 #000;
       }
     }
 
@@ -51,7 +51,7 @@
       position: absolute;
       padding: 0;
       margin: 30px 45px;
-      text-shadow: 0px 0px 5px black;
+      text-shadow: 0 0 5px black;
       text-align: left;
       font-weight: bold;
     }
@@ -62,7 +62,7 @@
         left: 0;
       }
       &:hover img {
-        box-shadow: 0px 0px 50px 8px #99ddff;
+        box-shadow: 0 0 50px 8px #99ddff;
       }
     }
 
@@ -75,7 +75,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 50px 10px #990000;
+        box-shadow: 0 0 50px 10px #990000;
       }
     }
 
@@ -87,7 +87,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 50px 10px #e6ac00;
+        box-shadow: 0 0 50px 10px #e6ac00;
       }
     }
 
@@ -99,7 +99,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 50px 10px #b366ff;
+        box-shadow: 0 0 50px 10px #b366ff;
       }
     }
 
@@ -111,7 +111,7 @@
       }
 
       &:hover img {
-        box-shadow: 0px 0px 50px 10px #0000b3;
+        box-shadow: 0 0 50px 10px #0000b3;
       }
     }
   }

@@ -1,4 +1,8 @@
+// Variables
 @import 'settings/typography-variables';
+@import 'settings/sizing-variables';
+@import 'settings/breakpoint-variables';
+@import 'settings/color-variables';
 
 @import 'utilities/typography';
 
@@ -6,5 +10,38 @@
 @import 'components/slider';
 @import 'components/navbar';
 @import 'components/header';
+@import 'components/map';
+@import 'components/contact-form';
 
 @import 'main';
+
+// Base layout styles
+body {
+  background: url('black-marble.jpg') no-repeat;
+  overflow-x: hidden;
+
+  &.menu-opened {
+    overflow: hidden;
+  }
+}
+
+.zen-container {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media #{$sm-up} {
+    width: $container-sm;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media #{$md-up} {
+    margin-top: 100px;
+    width: $container-md;
+  }
+
+  @media #{$lg-up} {
+    width: 100%;
+  }
+}

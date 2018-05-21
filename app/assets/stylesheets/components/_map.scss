@@ -1,0 +1,16 @@
+.zen-map {
+  float: left;
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media #{$lg-up} {
+    width: 50%;
+  }
+
+  &__google-map {
+    height: 300px;
+    width:  300px;
+    margin: auto;
+  }
+}
