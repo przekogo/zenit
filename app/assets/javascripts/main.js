@@ -1,7 +1,8 @@
 $(function() {
-  if ($('.js-navbar').length) {
-    $(window).scroll(initNavbar);
+  if ($('.js-navbar-expandable').length) {
+    $(window).scroll(compactNavbar);
   }
+  $('.js-navbar').each(initNavbar);
   $('.js-slider').each(initSlider);
   $('#zen_map_main').each(initGoogleMaps);
 });
@@ -24,8 +25,8 @@ function initSlider() {
   }, 15000);
 }
 
-function initNavbar() {
-  $navbar = $('.js-navbar');
+function compactNavbar() {
+  var $navbar = $('.js-navbar');
   if ($navbar.hasClass('compacted') && $(window).scrollTop() == 0) {
     $navbar.toggleClass('compacted');
   }
@@ -34,22 +35,30 @@ function initNavbar() {
   }
 }
 
+function initNavbar() {
+  var $navbar = $(this);
+  console.log('asd');
+  $navbar.find('.zen-navbar__toggle').on('click', function() {
+    $navbar.toggleClass('open');
+  });
+}
+
 function initZenMapMain() {
-  zenitLocation = {lat: 51.757231, lng: 19.4646147};
-  map = new google.maps.Map(
+  var zenitLocation = {lat: 51.757231, lng: 19.4646147};
+  var map = new google.maps.Map(
     document.getElementById('zen_map_main'), {
     center: zenitLocation,
     zoom: 15
   });
 
-  infowindow = new google.maps.InfoWindow();
-  service = new google.maps.places.PlacesService(map);
+  var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
 
   service.getDetails({
     placeId: 'ChIJv3xdkNE0GkcRzuAEvwhlC6w'
   }, function(place, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-      marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
         map: map,
         position: zenitLocation
       });
