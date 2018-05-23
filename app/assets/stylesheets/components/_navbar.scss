@@ -32,6 +32,7 @@
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
+    z-index: 2;
 
     @media #{$md-up} {
       display: none;
@@ -84,10 +85,11 @@
 
   &__button {
     float: left;
-    margin-top: -100%;
+    margin-top: -70px;
     width: 100%;
     height: 70px;
-    border-bottom: 2px $color-black solid;
+    background: url('marble.jpg') no-repeat fixed;
+    background-size: 100%;
     transition: all .5s ease;
     text-decoration: none;
     color: $color-black;
@@ -95,8 +97,7 @@
     @media #{$md-up} {
       margin-top: 0;
       width: 19%;
-      background: url('marble.jpg') no-repeat fixed;
-      background-size: 100%;
+      border-bottom: 2px $color-black solid;
     }
 
     &.highlight {
@@ -109,12 +110,13 @@
         font-weight: bold;
       }
 
-      p {
+      > a {
         margin: 0;
 
         @media #{$md-up} {
           position: absolute;
           top: 23px;
+          left: 0;
           padding: 0;
           width: 100%;
           line-height: 30px;
@@ -146,21 +148,25 @@
   }
 
   &__logo {
-    display: none;
-    position: relative;
-    z-index: 0;
-    top: 100%;
-    width: 80%;
-    height: 130px;
-    margin: 0 0 0 10%;
-    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 95px;
     background: url('marble.jpg') no-repeat fixed;
     background-size: 100%;
-    border-bottom: 2px $color-black solid;
     transition: all .5s ease;
+    cursor: auto;
+    z-index: 1;
 
     @media #{$md-up} {
-      display: block;
+      position: relative;
+      top: 100%;
+      width: 80%;
+      height: 130px;
+      margin: 0 0 0 10%;
+      border-radius: 0 0 50% 50%;
+      border-bottom: 2px $color-black solid;
+      z-index: 0;
     }
 
     @media #{$lg-up} {
@@ -168,14 +174,22 @@
     }
 
     img {
-      margin-top: 10px;
-      width: 115px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 80px;
       transition: all .5s ease;
 
-    @media #{$lg-up} {
-      margin-top: 15px;
-      width: 150px;
-    }
+      @media #{$md-up} {
+        position: unset;
+        margin-top: 10px;
+        width: 115px;
+      }
+
+      @media #{$lg-up} {
+        margin-top: 15px;
+        width: 150px;
+      }
     }
   }
 
@@ -188,7 +202,15 @@
     }
 
     img {
-      opacity: 0;
+      display: none;
+    }
+  }
+
+  &.open &__logo {
+    img {
+      top: 25px;
+      left: 10px;
+      width: 100px;
     }
   }
 }
