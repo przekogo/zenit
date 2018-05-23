@@ -194,15 +194,17 @@
   }
 
   &.compacted &__logo {
-    top: 50%;
-    height: 75px;
+    @media #{$md-up} {
+        top: 50%;
+        height: 75px;
+
+        img {
+          opacity: 0;
+        }
+    }
 
     @media #{$lg-up} {
       height: 100px;
-    }
-
-    img {
-      display: none;
     }
   }
 
