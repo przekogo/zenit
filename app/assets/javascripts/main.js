@@ -26,7 +26,13 @@ function initSlider() {
 }
 
 function compactNavbar() {
+  if ($(window).width() < 768) {
+    return;
+  }
   var $navbar = $('.js-navbar');
+  if (!$navbar.hasClass('compacted') && $(window).scrollTop() == 0) {
+    return;
+  }
   if ($navbar.hasClass('compacted') && $(window).scrollTop() == 0) {
     $navbar.toggleClass('compacted');
   }
