@@ -11,6 +11,18 @@ module Zenit
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    ActionMailer::Base.smtp_settings = {
+      address:        Rails.application.secrets.sendgrid[:address],
+      domain:         Rails.application.secrets.domain_name,
+      password:       Rails.application.secrets.sendgrid[:password],
+      port:           Rails.application.secrets.sendgrid[:port],
+      user_name:      Rails.application.secrets.sendgrid[:username],
+
+      authentication: :plain,
+      enable_starttls_auto: true,
+    }
+
+    config.action_mailer.default_url_options = { host: Rails.application.secrets.domain_name }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
