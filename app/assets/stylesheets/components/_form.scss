@@ -1,0 +1,52 @@
+.zen-form {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media #{$lg-up} {
+    padding: 50px;
+    width: 50%;
+  }
+
+  &__field {
+    display: block;
+    padding: 3px;
+    margin: 10px auto;
+    width: 90%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px $color-white;
+    font-size: $fs-base;
+
+    @media #{$lg-up} {
+      margin: 20px auto;
+      width: 500px;
+    }
+
+    &.error {
+      box-shadow:
+        0 0 3px 2px $color-error,
+        inset 0 0 2px 1px $color-error;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 2px $color-highlight;
+      outline: none;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    width: 100px;
+  }
+}
+
+label.error {
+  fon-size: $fs-base;
+  color: $color-error;
+  display: block;
+  margin: -8px auto 10px auto;
+  width: 90%;
+  text-align: center;
+}

@@ -12,4 +12,5 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require jquery.validate
 //= require_tree .

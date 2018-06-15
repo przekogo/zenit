@@ -2,14 +2,14 @@
 .zen-container
   .zen-map
     #zen_map_main.zen-map__google-map
-  .zen-contact-form
-    =form_tag 'contact/mail', method: 'post', remote: true, id: 'contact_form' do
-      =text_field_tag :name, nil, class: 'zen-contact-form__field', placeholder: 'Imię i nazwisko lub nazwa firmy'
-      =text_field_tag :email, nil, class: 'zen-contact-form__field', placeholder: 'Email'
-      =text_area_tag :message, nil, class: 'zen-contact-form__field', rows: 5, placeholder: 'Treść wiadomości'
-      =button_tag 'Dostarcz', type: 'submit', class: 'zen-contact-form__button'
+  .zen-form.js-validate
+    =form_tag 'contact/mail', method: 'post', remote: true, id: 'contact_form', class: 'js-validate' do
+      =text_field_tag :name, nil, class: 'zen-form__field', placeholder: 'Imię i nazwisko lub nazwa firmy'
+      =text_field_tag :email, nil, class: 'zen-form__field', placeholder: 'Email'
+      =text_area_tag :message, nil, class: 'zen-form__field', rows: 5, placeholder: 'Treść wiadomości'
+      =button_tag 'Dostarcz', type: 'submit', class: 'zen-form__button'
     .row
       %p.disclaimer
-        * Jeżeli interesuje Państwa pellet, bądź palnik wraz z transportem prosimy o uzupełnienie formularza o kod pocztowy miejsca rozładunku
+        * lorem ipsum
       %p.disclaimer
-        ** Zainteresowanych stałymi dostawami pelletu prosimy o podanie miesięcznej ilości, jaka Państwa interesuje
+        ** ipsum lorem

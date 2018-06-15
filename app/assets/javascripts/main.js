@@ -43,7 +43,6 @@ function compactNavbar() {
 
 function initNavbar() {
   var $navbar = $(this);
-  console.log('asd');
   $navbar.find('.zen-navbar__toggle').on('click', function() {
     $navbar.toggleClass('open');
   });
