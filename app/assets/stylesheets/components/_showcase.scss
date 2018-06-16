@@ -51,7 +51,7 @@
       position: absolute;
       padding: 0;
       margin: 30px 45px;
-      text-shadow: 0 0 5px black;
+      text-shadow: 0 0 5px $color-black;
       text-align: left;
       font-weight: bold;
     }
@@ -62,7 +62,7 @@
         left: 0;
       }
       &:hover img {
-        box-shadow: 0 0 50px 8px #99ddff;
+        box-shadow: 0 0 50px 8px $color-crystal;
       }
     }
 
@@ -75,7 +75,7 @@
       }
 
       &:hover img {
-        box-shadow: 0 0 50px 10px #990000;
+        box-shadow: 0 0 50px 10px $color-crimson;
       }
     }
 
@@ -87,7 +87,7 @@
       }
 
       &:hover img {
-        box-shadow: 0 0 50px 10px #e6ac00;
+        box-shadow: 0 0 50px 10px $color-golden;
       }
     }
 
@@ -99,7 +99,7 @@
       }
 
       &:hover img {
-        box-shadow: 0 0 50px 10px #b366ff;
+        box-shadow: 0 0 50px 10px $color-lavender;
       }
     }
 
@@ -111,7 +111,7 @@
       }
 
       &:hover img {
-        box-shadow: 0 0 50px 10px #0000b3;
+        box-shadow: 0 0 50px 10px $color-azure;
       }
     }
   }

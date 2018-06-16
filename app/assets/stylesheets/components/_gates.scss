@@ -1,0 +1,217 @@
+.zen-gates {
+  display: flex;
+  align-items: stretch;
+  font-size: $fs-header;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 71px);
+
+  &__title {
+    display: none;
+    position: absolute;
+    font-size: $fs-title-xl;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    text-align: center;
+
+    > img {
+      position: absolute;
+      bottom: 55%;
+      left: 50%;
+      height: 30vh;
+      min-height: 200px;
+      max-height: 310px;
+      transform: translate(-50%, -50px);
+    }
+
+    @media #{$lg-up} {
+      display: block;
+    }
+  }
+
+  &__revealable {
+    position: relative;
+    display: block;
+
+    @media #{$lg-up} {
+      float: left;
+      padding-top: 80px;
+      width: 20%;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 30%, 100% 70%, 100% 70%, 0 30%);
+        background: $color-white;
+        transition: all .5s;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::before {
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 85px), 0 calc(100% - 35px));
+        }
+
+        > span {
+          @media #{$lg-up} {
+            &.top-left {
+              left: 100%;
+            }
+
+            &.top-right {
+              left: -100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.lotos {
+      > span {
+        &.bot {
+          text-shadow: 0 0 1px $color-azure;
+        }
+      }
+      &:hover {
+        > span {
+          @media #{$lg-up} {
+            &.bot {
+              color: $color-azure;
+            }
+          }
+        }
+      }
+
+      &::before {
+        background: url('zenit-1.jpg') center;
+        background-size: cover;
+      }
+    }
+
+    &.lily {
+      > span {
+        &.bot {
+          text-shadow: 0 0 1px $color-crystal;
+        }
+      }
+      &:hover {
+        > span {
+          @media #{$lg-up} {
+            &.bot {
+              color: $color-crystal;
+            }
+          }
+        }
+      }
+
+      &::before {
+        background: url('zenit-2.jpg') center;
+        background-size: cover;
+      }
+    }
+
+    &.orchid {
+      > span {
+        &.bot {
+          text-shadow: 0 0 1px $color-golden;
+        }
+      }
+      &:hover {
+        > span {
+          @media #{$lg-up} {
+            &.bot {
+              color: $color-golden;
+            }
+          }
+        }
+      }
+
+      &::before {
+        background: url('zenit-3.jpg') center;
+        background-size: cover;
+      }
+    }
+
+    &.rose {
+      > span {
+        &.bot {
+          text-shadow: 0 0 1px $color-crimson;
+        }
+      }
+      &:hover {
+        > span {
+          @media #{$lg-up} {
+            &.bot {
+              color: $color-crimson;
+            }
+          }
+        }
+      }
+
+      &::before {
+        background: url('zenit-4.jpg') center;
+        background-size: cover;
+      }
+    }
+
+    &.iris {
+      > span {
+        &.bot {
+          text-shadow: 0 0 1px $color-lavender;
+        }
+      }
+      &:hover {
+        > span {
+          @media #{$lg-up} {
+            &.bot {
+              color: $color-lavender;
+            }
+          }
+        }
+      }
+
+      &::before {
+        background: url('zenit-2.jpg') center;
+        background-size: cover;
+      }
+    }
+
+    > span {
+      display: none;
+      position: relative;
+      box-sizing: border-box;
+
+      @media #{$lg-up} {
+        display: inline-block;
+        transition: all .3s;
+
+        &.top-left {
+          top: 0;
+          left: 15%;
+        }
+
+        &.top-right {
+          top: 30px;
+          left: 10%;
+          text-align: right;
+        }
+
+        &.bot {
+          position: absolute;
+          bottom: 15px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          text-shadow: 0 0 0 $color-white;
+        }
+      }
+    }
+  }
+}
