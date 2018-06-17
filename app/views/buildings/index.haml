@@ -1,38 +1,38 @@
 =render partial: 'layouts/navbar', locals: {location: 'buildings'}
-.zen-container
+.zen-container.full-width
   .zen-gates
     .zen-gates__title
       %img{src: 'assets/logo.png'}
       Zenit Blossom Center
-    .zen-gates__revealable.lotos
+    %a.zen-gates__revealable.lotos{href: 'buildings/lotus'}
       %span.top-left
         Azure
       %span.top-right
         Lotus
       %span.bot
         Komunikacja
-    .zen-gates__revealable.lily
+    %a.zen-gates__revealable.lily{href: 'buildings/lily'}
       %span.top-left
         Crystal
       %span.top-right
         Lily
       %span.bot
         Kreatywność
-    .zen-gates__revealable.orchid
+    %a.zen-gates__revealable.orchid{href: 'buildings/orchid'}
       %span.top-left
         Golden
       %span.top-right
         Orchid
       %span.bot
         Luksus
-    .zen-gates__revealable.rose
+    %a.zen-gates__revealable.rose{href: 'buildings/rose'}
       %span.top-left
         Crimson
       %span.top-right
         Rose
       %span.bot
         Pasja
-    .zen-gates__revealable.iris
+    %a.zen-gates__revealable.iris{href: 'buildings/iris'}
       %span.top-left
         Lavender
       %span.top-right

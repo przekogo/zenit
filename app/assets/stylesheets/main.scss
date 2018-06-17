@@ -16,13 +16,12 @@ body {
 .zen-container {
   width: 100%;
   height: 100%;
-  padding: 0 20px;
+  padding: 0;
   box-sizing: border-box;
 
   @media #{$sm-up} {
     width: $container-sm;
     margin: 0 auto;
-    padding: 0;
   }
 
   @media #{$md-up} {
@@ -33,6 +32,10 @@ body {
   @media #{$lg-up} {
     width: 100%;
   }
+}
+
+.full-width {
+  width: 100%;
 }
 
 a {

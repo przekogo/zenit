@@ -1,10 +1,15 @@
 .zen-gates {
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
   font-size: $fs-header;
   position: absolute;
   width: 100%;
-  height: calc(100% - 71px);
+
+  @media #{$lg-up} {
+    flex-direction: row;
+    align-items: stretch;
+    height: calc(100% - 71px);
+  }
 
   &__title {
     display: none;
@@ -33,27 +38,63 @@
   &__revealable {
     position: relative;
     display: block;
+    margin-top: 50px;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    max-height: 900px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 25px, 100% 0, 100% calc(100% - 55px), 0 100%);
+      transition: all .5s;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      transform: translate(0, 14px);
+      background: $color-white;
+      opacity: .5;
+      transition: opacity .5s;
+      z-index: 0;
+
+      @media #{$lg-up} {
+        display: none;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: .8;
+      }
+    }
 
     @media #{$lg-up} {
       float: left;
+      margin: 0;
       padding-top: 80px;
       width: 20%;
+      height: unset;
+      min-height: unset;
+      max-height: unset;
       overflow: hidden;
 
       &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         clip-path: polygon(0 30%, 100% 70%, 100% 70%, 0 30%);
         background: $color-white;
-        transition: all .5s;
       }
 
       &:hover {
-        cursor: pointer;
 
         &::before {
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 85px), 0 calc(100% - 35px));
@@ -62,11 +103,16 @@
         > span {
           @media #{$lg-up} {
             &.top-left {
-              left: 100%;
+              left: 145%;
             }
 
             &.top-right {
-              left: -100%;
+              left: -40%;
+            }
+
+            &.bot {
+              bottom: 15px;
+              opacity: 1;
             }
           }
         }
@@ -74,11 +120,8 @@
     }
 
     &.lotos {
-      > span {
-        &.bot {
-          text-shadow: 0 0 1px $color-azure;
-        }
-      }
+      text-shadow: 0 0 1px $color-azure;
+
       &:hover {
         > span {
           @media #{$lg-up} {
@@ -96,11 +139,8 @@
     }
 
     &.lily {
-      > span {
-        &.bot {
-          text-shadow: 0 0 1px $color-crystal;
-        }
-      }
+      text-shadow: 0 0 1px $color-crystal;
+
       &:hover {
         > span {
           @media #{$lg-up} {
@@ -118,11 +158,8 @@
     }
 
     &.orchid {
-      > span {
-        &.bot {
-          text-shadow: 0 0 1px $color-golden;
-        }
-      }
+      text-shadow: 0 0 1px $color-golden;
+
       &:hover {
         > span {
           @media #{$lg-up} {
@@ -140,11 +177,8 @@
     }
 
     &.rose {
-      > span {
-        &.bot {
-          text-shadow: 0 0 1px $color-crimson;
-        }
-      }
+      text-shadow: 0 0 1px $color-crimson;
+
       &:hover {
         > span {
           @media #{$lg-up} {
@@ -162,11 +196,8 @@
     }
 
     &.iris {
-      > span {
-        &.bot {
-          text-shadow: 0 0 1px $color-lavender;
-        }
-      }
+      text-shadow: 0 0 1px $color-lavender;
+
       &:hover {
         > span {
           @media #{$lg-up} {
@@ -184,32 +215,49 @@
     }
 
     > span {
-      display: none;
-      position: relative;
-      box-sizing: border-box;
+      font-size: $fs-title-lg;
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transition: all .3s, bottom .8s;
+      z-index: 1;
+
+      &.top-left {
+        bottom: 50%;
+        transform: translate(-70%, -30px);
+      }
+
+      &.top-right {
+        bottom: 50%;
+        transform: translate(-20%, 30px);
+      }
+
+      &.bot {
+        display: none;
+      }
 
       @media #{$lg-up} {
-        display: inline-block;
-        transition: all .3s;
+        font-size: $fs-header;
 
         &.top-left {
-          top: 0;
-          left: 15%;
+          bottom: 35px;
+          transform: translate(-70%, 0);
         }
 
         &.top-right {
-          top: 30px;
-          left: 10%;
-          text-align: right;
+          bottom: 5px;
+          transform: translate(-20%, 0);
         }
 
         &.bot {
+          display: inline-block;
           position: absolute;
-          bottom: 15px;
+          bottom: 0;
           left: 0;
           width: 100%;
           text-align: center;
           text-shadow: 0 0 0 $color-white;
+          opacity: 0;
         }
       }
     }
