@@ -91,13 +91,20 @@
 
       &::before {
         clip-path: polygon(0 30%, 100% 70%, 100% 70%, 0 30%);
-        background: $color-white;
+
+        @supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+          opacity: 0;
+        }
       }
 
       &:hover {
 
         &::before {
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 85px), 0 calc(100% - 35px));
+
+          @supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+            opacity: 1;
+          }
         }
 
         > span {
@@ -234,6 +241,10 @@
 
       &.bot {
         display: none;
+
+        @supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+          background: rgba(255, 255, 255, 0.6);
+        }
       }
 
       @media #{$lg-up} {
