@@ -1,0 +1,25 @@
+-exclude ||= nil
+.zen-showcase
+  %h2 NASZE BUDYNKI
+  -unless exclude == 'lily'
+    %a.zen-showcase__box.lily{href: '/buildings/lily'}
+      %img{src: '/assets/button-crystal-lily.jpg'}
+      %p
+        Crystal
+        %br Lily
+  -unless exclude == 'rose'
+    %a.zen-showcase__box.rose{href: '/buildings/rose'}
+      %img{src: '/assets/button-crimson-rose.jpg'}
+      %p Crimson Rose
+  -unless exclude == 'orchid'
+    %a.zen-showcase__box.orchid{href: '/buildings/orchid'}
+      %img{src: '/assets/button-golden-orchid.jpg'}
+      %p &nbsp&nbspGolden Orchid
+  -unless exclude == 'iris'
+    %a.zen-showcase__box.iris{href: '/buildings/iris'}
+      %img{src: '/assets/button-lavender-iris.jpg'}
+      %p Lavender Iris&nbsp&nbsp
+  -unless exclude == 'lotus'
+    %a.zen-showcase__box.lotus{href: '/buildings/lotus'}
+      %img{src: '/assets/button-azure-lotus.jpg'}
+      %p Azure Lotus

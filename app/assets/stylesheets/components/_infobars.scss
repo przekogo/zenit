@@ -1,0 +1,59 @@
+.zen-infobars {
+  display:flex;
+  flex-direction: column;
+
+  &__bar {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 1px;
+      transform: translate(50%, 0);
+      background-color: $color-white;
+      box-shadow: 0 0 6px 1px $color-highlight;
+    }
+
+    &__title {
+      font-size: $fs-header;
+      width: 100%;
+      text-align: center;
+      text-shadow: 0 0 0 $color-highlight;
+      transition: all .4s;
+
+      &:hover {
+        text-shadow: 0 0 4px $color-highlight;
+        cursor: pointer;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &__details {
+      position: relative;
+      max-height: 0;
+      overflow: hidden;
+      transition: all .5s;
+
+      & > p {
+        margin: 0;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.zen-buildings .zen-infobars {
+  padding: 20px 0;
+
+  @media #{$md-up} {
+    padding: 0;
+    width: 40%;
+    min-width: 330px;
+  }
+}

@@ -1,0 +1,10 @@
+.zen-buildings {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media #{$md-up} {
+    flex-wrap: nowrap;
+  }
+}

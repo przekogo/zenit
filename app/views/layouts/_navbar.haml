@@ -6,13 +6,13 @@
     %span
     %span
     %span
-  %a.zen-navbar__button{class: "#{'active' if location == 'history'}", href: 'history'} Historia
-  %a.zen-navbar__button{class: "#{'active' if location == 'about'}", href: 'about'} O nas
+  %a.zen-navbar__button{class: "#{'active' if location == 'history'}", href: '/history'} Historia
+  %a.zen-navbar__button{class: "#{'active' if location == 'about'}", href: '/about'} O nas
   .zen-navbar__button.highlight{class: "#{'active' if location == 'spaces'}"}
-    %a{href: 'spaces'}
+    %a{href: '/spaces'}
       Powierzchnie do&nbspwynajęcia
     .zen-navbar__logo
       %a{href: '/'}
-        %img{src: 'assets/logo.png'}
-  %a.zen-navbar__button{class: "#{'active' if location == 'buildings'}", href: 'buildings'} Inwestycja
-  %a.zen-navbar__button{class: "#{'active' if location == 'contact'}", href: 'contact'} Kontakt
+        %img{src: '/assets/logo.png'}
+  %a.zen-navbar__button{class: "#{'active' if location == 'buildings'}", href: '/buildings'} Inwestycja
+  %a.zen-navbar__button{class: "#{'active' if location == 'contact'}", href: '/contact'} Kontakt

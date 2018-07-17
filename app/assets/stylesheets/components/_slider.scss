@@ -15,3 +15,11 @@
     }
   }
 }
+
+.zen-buildings .zen-slider {
+
+  @media #{$md-up} {
+    width: auto;
+    max-width: 1000px;
+  }
+}

@@ -1,10 +1,8 @@
 $(function() {
-  console.log('asd');
   $('.js-validate').each(initFormValidator);
 });
 
 function initFormValidator() {
-  console.log($(this));
   $(this).validate({
     rules: {
       name: {
