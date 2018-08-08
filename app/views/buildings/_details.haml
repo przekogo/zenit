@@ -1,0 +1,18 @@
+.zen-gate
+  .zen-gate__title
+    = t "buildings.#{building}.name"
+  .zen-gate__description
+    = t "buildings.#{building}.description"
+  .zen-gate__actions
+    .zen-gate__button.spaces{'data-tooltip' => 'spaces'}
+      %span
+    .zen-gate__button.gallery{'data-tooltip' => 'gallery'}
+      %span
+    .zen-gate__button.blueprint{'data-tooltip' => 'blueprint'}
+      %span
+    .zen-gate__tooltip.transparent{'data-tooltip' => 'spaces'}
+      = t "buildings.button.spaces"
+    .zen-gate__tooltip.transparent{'data-tooltip' => 'gallery'}
+      = t "buildings.button.gallery"
+    .zen-gate__tooltip.transparent{'data-tooltip' => 'blueprint'}
+      = t "buildings.button.blueprint"

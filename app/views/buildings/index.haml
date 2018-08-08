@@ -4,35 +4,40 @@
     .zen-gates__title
       %img{src: 'assets/logo.png'}
       Zenit Blossom Center
-    %a.zen-gates__revealable.lotos{href: '/buildings/lotus'}
+    .zen-gates__revealable.lotos
+      =render partial: 'buildings/details', locals: {building: 'lotus'}
       %span.top-left
         Azure
       %span.top-right
         Lotus
       %span.bot
         Komunikacja
-    %a.zen-gates__revealable.lily{href: '/buildings/lily'}
+    .zen-gates__revealable.lily
+      =render partial: 'buildings/details', locals: {building: 'lily'}
       %span.top-left
         Crystal
       %span.top-right
         Lily
       %span.bot
         Kreatywność
-    %a.zen-gates__revealable.orchid{href: '/buildings/orchid'}
+    .zen-gates__revealable.orchid
+      =render partial: 'buildings/details', locals: {building: 'orchid'}
       %span.top-left
         Golden
       %span.top-right
         Orchid
       %span.bot
         Luksus
-    %a.zen-gates__revealable.rose{href: '/buildings/rose'}
+    .zen-gates__revealable.rose
+      =render partial: 'buildings/details', locals: {building: 'rose'}
       %span.top-left
         Crimson
       %span.top-right
         Rose
       %span.bot
         Pasja
-    %a.zen-gates__revealable.iris{href: '/buildings/iris'}
+    .zen-gates__revealable.iris
+      =render partial: 'buildings/details', locals: {building: 'iris'}
       %span.top-left
         Lavender
       %span.top-right

@@ -1,0 +1,1201 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Cormorant+Garamond:400,700);
+/* line 3, /home/kogo/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+body {
+  font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 9, /home/kogo/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+b,
+strong {
+  font-weight: 700;
+}
+
+/* line 14, /home/kogo/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 22, /home/kogo/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 58px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  /* line 28, /home/kogo/projects/zenit/app/assets/stylesheets/utilities/_typography.scss */
+  h2.md-left {
+    width: 40%;
+  }
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background: url("black-marble.jpg") no-repeat;
+  background-size: cover;
+}
+/* line 9, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase h2 {
+  margin-top: 10px;
+  width: 100%;
+  color: #ddc;
+  text-shadow: -2px -2px 0 rgba(255, 255, 255, 0.3);
+}
+/* line 16, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box {
+  position: relative;
+  margin: 15px auto;
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  font-size: 58px;
+  color: #fff;
+}
+/* line 25, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box::before {
+  margin: 10px;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 50px 10px #000;
+  transition: all 0.5s ease;
+}
+/* line 37, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box:hover {
+  cursor: pointer;
+}
+/* line 39, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box:hover::before {
+  box-shadow: inset 0 0 25px 0 #000;
+}
+/* line 44, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box img {
+  display: block;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+/* line 50, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box p {
+  position: absolute;
+  padding: 0;
+  margin: 30px 45px;
+  text-shadow: 0 0 5px #000;
+  text-align: left;
+  font-weight: bold;
+}
+/* line 60, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lily p {
+  top: 0;
+  left: 0;
+}
+/* line 64, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lily:hover img {
+  box-shadow: 0 0 50px 8px #99ddff;
+}
+/* line 70, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.rose p {
+  margin-top: 15px;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+/* line 77, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.rose:hover img {
+  box-shadow: 0 0 50px 10px #990000;
+}
+/* line 83, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.orchid p {
+  margin: 15px 20px;
+  top: 0;
+  left: 0;
+}
+/* line 89, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.orchid:hover img {
+  box-shadow: 0 0 50px 10px #e6ac00;
+}
+/* line 95, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.iris p {
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+/* line 101, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.iris:hover img {
+  box-shadow: 0 0 50px 10px #b366ff;
+}
+/* line 107, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lotus p {
+  margin: 20px 40px;
+  top: 0;
+  left: 0;
+}
+/* line 113, /home/kogo/projects/zenit/app/assets/stylesheets/components/_showcase.scss */
+.zen-showcase__box.lotus:hover img {
+  box-shadow: 0 0 50px 10px #0000b3;
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider {
+  position: relative;
+  z-index: -1;
+}
+/* line 4, /home/kogo/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 4s ease;
+}
+/* line 11, /home/kogo/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+.zen-slider__image.active {
+  position: relative;
+  opacity: 1;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 19, /home/kogo/projects/zenit/app/assets/stylesheets/components/_slider.scss */
+  .zen-buildings .zen-slider {
+    width: auto;
+    max-width: 1000px;
+  }
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  line-height: 70px;
+  font-size: 28px;
+  text-align: center;
+  transition: all .5s ease;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar {
+    top: 50px;
+    background: none;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar {
+    font-size: 44px;
+  }
+}
+/* line 20, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.compacted {
+  top: 0;
+}
+/* line 24, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__toggle {
+  display: block;
+  position: relative;
+  margin: 25px auto;
+  width: 60px;
+  height: 45px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  /* line 24, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__toggle {
+    display: none;
+  }
+}
+/* line 39, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__toggle > span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+/* line 51, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__toggle > span:nth-child(1) {
+  top: 0;
+}
+/* line 55, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__toggle > span:nth-child(2) {
+  top: 18px;
+}
+/* line 59, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__toggle > span:nth-child(3) {
+  top: 36px;
+}
+/* line 67, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.open .zen-navbar__toggle > span:nth-child(1) {
+  top: 18px;
+  transform: rotate(135deg);
+}
+/* line 72, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.open .zen-navbar__toggle > span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+/* line 77, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.open .zen-navbar__toggle > span:nth-child(3) {
+  top: 18px;
+  transform: rotate(-135deg);
+}
+/* line 84, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button {
+  float: left;
+  margin-top: -70px;
+  width: 100%;
+  height: 70px;
+  background: url("marble.jpg") no-repeat fixed;
+  background-size: cover;
+  transition: all .5s ease;
+  text-decoration: none;
+  color: #000;
+}
+@media (min-width: 768px) {
+  /* line 84, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__button {
+    margin-top: 0;
+    width: 19%;
+    border-bottom: 2px #000 solid;
+  }
+}
+@media (min-width: 768px) {
+  /* line 101, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__button.highlight {
+    float: left;
+    width: 24%;
+    height: 80px;
+    position: relative;
+    font-weight: bold;
+  }
+}
+/* line 111, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button.highlight > a {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  /* line 111, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__button.highlight > a {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 30px;
+    z-index: 1;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 101, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__button.highlight {
+    height: 100px;
+  }
+}
+/* line 131, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button.active {
+  text-shadow: 0 0 4px #80ffff;
+  color: #006666;
+}
+/* line 136, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__button:hover {
+  cursor: pointer;
+  text-shadow: 0 0 4px #80ffff;
+  box-shadow: inset 10px 40px 90px -60px #80ffff;
+  color: #006666;
+}
+/* line 144, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.open .zen-navbar__button {
+  margin-top: 0;
+}
+/* line 148, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 95px;
+  background: url("marble.jpg") no-repeat fixed;
+  background-size: cover;
+  transition: all .5s ease;
+  cursor: auto;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  /* line 148, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__logo {
+    position: relative;
+    top: 100%;
+    width: 80%;
+    height: 130px;
+    margin: 0 0 0 10%;
+    border-radius: 0 0 50% 50%;
+    border-bottom: 2px #000 solid;
+    z-index: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 148, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__logo {
+    height: 170px;
+  }
+}
+/* line 174, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar__logo img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 80px;
+  transition: all .5s ease;
+}
+@media (min-width: 768px) {
+  /* line 174, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__logo img {
+    position: unset;
+    margin-top: 10px;
+    width: 115px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 174, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar__logo img {
+    margin-top: 15px;
+    width: 150px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 194, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar.compacted .zen-navbar__logo {
+    top: 50%;
+    height: 75px;
+  }
+  /* line 199, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar.compacted .zen-navbar__logo img {
+    opacity: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 194, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+  .zen-navbar.compacted .zen-navbar__logo {
+    height: 100px;
+  }
+}
+/* line 210, /home/kogo/projects/zenit/app/assets/stylesheets/components/_navbar.scss */
+.zen-navbar.open .zen-navbar__logo img {
+  top: 25px;
+  left: 10px;
+  width: 100px;
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_map.scss */
+.zen-map {
+  float: left;
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_map.scss */
+  .zen-map {
+    width: 50%;
+  }
+}
+/* line 11, /home/kogo/projects/zenit/app/assets/stylesheets/components/_map.scss */
+.zen-map__google-map {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+.zen-form {
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+  .zen-form {
+    padding: 50px;
+    width: 50%;
+  }
+}
+/* line 11, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+.zen-form__field {
+  display: block;
+  padding: 3px;
+  margin: 10px auto;
+  width: 90%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 1px #fff;
+  font-size: 20px;
+}
+@media (min-width: 1200px) {
+  /* line 11, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+  .zen-form__field {
+    margin: 20px auto;
+    width: 500px;
+  }
+}
+/* line 26, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+.zen-form__field.error {
+  box-shadow: 0 0 3px 2px #cc0000, inset 0 0 2px 1px #cc0000;
+}
+/* line 32, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+.zen-form__field:focus {
+  box-shadow: 0 0 3px 2px #80ffff;
+  outline: none;
+}
+/* line 38, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+.zen-form__button {
+  display: block;
+  margin: auto;
+  width: 100px;
+}
+
+/* line 45, /home/kogo/projects/zenit/app/assets/stylesheets/components/_form.scss */
+label.error {
+  fon-size: 20px;
+  color: #cc0000;
+  display: block;
+  margin: -8px auto 10px auto;
+  width: 90%;
+  text-align: center;
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  position: absolute;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates {
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+/* line 15, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__title {
+  display: none;
+  position: absolute;
+  font-size: 130px;
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  text-align: center;
+}
+/* line 24, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__title > img {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  height: 30vh;
+  min-height: 200px;
+  max-height: 310px;
+  transform: translate(-50%, -50px);
+}
+@media (min-width: 1200px) {
+  /* line 15, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__title {
+    display: block;
+  }
+}
+/* line 39, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  max-height: 900px;
+  transition: width .5s;
+  cursor: pointer;
+}
+/* line 50, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 25px, 100% 0, 100% calc(100% - 55px), 0 100%);
+  transition: all .5s;
+}
+/* line 61, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable::after {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  transform: translate(0, 14px);
+  background: #fff;
+  opacity: .5;
+  transition: all .8s, opacity .5s;
+  z-index: 0;
+}
+@media (min-width: 1200px) {
+  /* line 61, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable::after {
+    display: none;
+  }
+}
+/* line 80, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable:hover::after {
+  opacity: .8;
+}
+/* line 85, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(black 0%, rgba(0, 0, 0, 0) 50%);
+  background-size: auto 200%;
+  background-position: 0 100%;
+  color: #fff;
+  overflow: hidden;
+  transition: background-position .5s;
+}
+/* line 98, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__title {
+  display: none;
+  width: 100%;
+  margin-top: 80px;
+  font-size: 58px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .5s, margin .5s;
+}
+@media (min-width: 1200px) {
+  /* line 98, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable .zen-gate__title {
+    display: block;
+  }
+}
+/* line 113, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__description {
+  opacity: 0;
+  margin: 150px 10% 0 10%;
+  width: 80%;
+  text-align: center;
+  font-size: 25px;
+  transition: opacity .5s, margin .5s;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  /* line 113, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable .zen-gate__description {
+    margin-top: 20px;
+  }
+}
+/* line 128, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__actions {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  transition: opacity .5s;
+  z-index: 1;
+}
+/* line 140, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__actions .zen-gate__button:nth-child(1n) {
+  transition: transform 1.5s cubic-bezier(0.5, 2, 0.61, 1.005) 0.3s, box-shadow 0.5s;
+}
+/* line 140, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__actions .zen-gate__button:nth-child(2n) {
+  transition: transform 1.5s cubic-bezier(0.5, 2, 0.61, 1.005) 0.6s, box-shadow 0.5s;
+}
+/* line 140, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__actions .zen-gate__button:nth-child(3n) {
+  transition: transform 1.5s cubic-bezier(0.5, 2, 0.61, 1.005) 0.9s, box-shadow 0.5s;
+}
+/* line 147, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  transform: scale(0);
+  box-shadow: inset 0 0 0 #fff;
+  perspective: 1000px;
+}
+/* line 157, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button:hover > span {
+  transform: rotateY(-30deg) rotateX(15deg);
+}
+/* line 162, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button > span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  transition: transform .5s;
+}
+/* line 173, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button.spaces > span {
+  background-image: url("icon-spaces.svg");
+}
+/* line 179, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button.gallery > span {
+  background-image: url("icon-gallery.svg");
+}
+/* line 185, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__button.blueprint > span {
+  background-image: url("icon-blueprint.svg");
+}
+/* line 191, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__tooltip {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: -10px;
+  font-family: "Cormorant Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  transform: translateY(-100%);
+  filter: blur(0px);
+  transition: filter .5s, opacity .5s;
+}
+/* line 204, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable .zen-gate__tooltip.transparent {
+  opacity: 0;
+  filter: blur(10px);
+  transition: filter 2s, opacity 1s;
+}
+/* line 213, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active {
+  cursor: auto;
+}
+/* line 216, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active::after {
+  bottom: 15px;
+  height: 100%;
+  opacity: 0;
+  background-color: #000;
+}
+/* line 223, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active > span {
+  color: #fff;
+}
+/* line 226, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active > span.top-left {
+  bottom: calc(100% - 140px);
+  transform: translate(-100%, -30px);
+}
+/* line 231, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active > span.top-right {
+  bottom: calc(100% - 140px);
+  transform: translate(20%, -30px);
+}
+@media (min-width: 1200px) {
+  /* line 223, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.active > span {
+    font-size: 40px;
+    transition: all .3s, bottom .8s;
+  }
+  /* line 240, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.active > span.top-left {
+    bottom: 45px;
+    transform: translate(-70%, 0);
+  }
+  /* line 245, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.active > span.top-right {
+    bottom: 15px;
+    transform: translate(-20%, 0);
+  }
+}
+/* line 252, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active .zen-gate {
+  background-position: 0 0;
+  transition: background-position 1s;
+}
+/* line 256, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active .zen-gate__title {
+  opacity: 1;
+  margin-top: 50px;
+  transition: opacity 1s ease-in .5s, margin 1s ease .5s;
+}
+/* line 263, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active .zen-gate__description {
+  opacity: 1;
+  margin-top: 120px;
+  transition: opacity 2s ease-in .2s, margin 2s ease-out .2s;
+}
+@media (min-width: 1200px) {
+  /* line 263, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.active .zen-gate__description {
+    margin-top: 0;
+    transition: opacity 2s ease-in 1s, margin 2s ease-out 1s;
+  }
+}
+/* line 276, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active .zen-gate__actions {
+  opacity: 1;
+}
+/* line 280, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.active .zen-gate__button {
+  transform: scale(1);
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  /* line 39, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable {
+    float: left;
+    margin: 0;
+    padding-top: 80px;
+    width: 20%;
+    height: unset;
+    min-height: unset;
+    max-height: unset;
+    overflow: visible;
+  }
+  /* line 297, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable::before {
+    clip-path: polygon(0 30%, 100% 70%, 100% 70%, 0 30%);
+  }
+  @supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+    /* line 297, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+    .zen-gates__revealable::before {
+      opacity: 0;
+    }
+  }
+  /* line 305, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.active {
+    width: 80%;
+  }
+  /* line 309, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable:hover, .zen-gates__revealable.active {
+    overflow: hidden;
+  }
+  /* line 312, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable:hover::before, .zen-gates__revealable.active::before {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 85px), 0 calc(100% - 35px));
+  }
+  @supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+    /* line 312, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+    .zen-gates__revealable:hover::before, .zen-gates__revealable.active::before {
+      opacity: 1;
+    }
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  /* line 322, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable:hover > span.top-left, .zen-gates__revealable.active > span.top-left {
+    left: 145%;
+    opacity: 0;
+  }
+  /* line 327, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable:hover > span.top-right, .zen-gates__revealable.active > span.top-right {
+    left: -40%;
+    opacity: 0;
+  }
+  /* line 332, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable:hover > span.bot, .zen-gates__revealable.active > span.bot {
+    bottom: 25px;
+    opacity: 1;
+  }
+}
+
+/* line 341, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lotos {
+  text-shadow: 0 0 1px #0000b3;
+}
+@media (min-width: 1200px) {
+  /* line 347, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.lotos:hover > span.bot, .zen-gates__revealable.lotos.active > span.bot {
+    color: #0000b3;
+  }
+}
+/* line 354, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lotos::before {
+  background: url("zenit-1.jpg") center;
+  background-size: cover;
+}
+/* line 361, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lotos .zen-gate__button:hover {
+  box-shadow: inset 10px 10px 10px #0000b3;
+}
+/* line 368, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lily {
+  text-shadow: 0 0 1px #99ddff;
+}
+@media (min-width: 1200px) {
+  /* line 374, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.lily:hover > span.bot, .zen-gates__revealable.lily.active > span.bot {
+    color: #99ddff;
+  }
+}
+/* line 381, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lily::before {
+  background: url("zenit-2.jpg") center;
+  background-size: cover;
+}
+/* line 388, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.lily .zen-gate__button:hover {
+  box-shadow: inset 10px 10px 10px #99ddff;
+}
+/* line 395, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.orchid {
+  text-shadow: 0 0 1px #e6ac00;
+}
+@media (min-width: 1200px) {
+  /* line 401, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.orchid:hover > span.bot, .zen-gates__revealable.orchid.active > span.bot {
+    color: #e6ac00;
+  }
+}
+/* line 408, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.orchid::before {
+  background: url("orchid-1.jpg") center;
+  background-size: cover;
+}
+/* line 415, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.orchid .zen-gate__button:hover {
+  box-shadow: inset 10px 10px 10px #e6ac00;
+}
+/* line 422, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.rose {
+  text-shadow: 0 0 1px #990000;
+}
+@media (min-width: 1200px) {
+  /* line 428, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.rose:hover > span.bot, .zen-gates__revealable.rose.active > span.bot {
+    color: #990000;
+  }
+}
+/* line 435, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.rose::before {
+  background: url("rose-1.jpg") center;
+  background-size: cover;
+}
+/* line 442, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.rose .zen-gate__button:hover {
+  box-shadow: inset 10px 10px 10px #990000;
+}
+/* line 449, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.iris {
+  text-shadow: 0 0 1px #b366ff;
+}
+@media (min-width: 1200px) {
+  /* line 455, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable.iris:hover > span.bot, .zen-gates__revealable.iris.active > span.bot {
+    color: #b366ff;
+  }
+}
+/* line 462, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.iris::before {
+  background: url("zenit-2.jpg") center;
+  background-size: cover;
+}
+/* line 469, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable.iris .zen-gate__button:hover {
+  box-shadow: inset 10px 10px 10px #b366ff;
+}
+/* line 476, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable > span {
+  font-size: 94px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transition: all .8s;
+  z-index: 1;
+}
+/* line 484, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable > span.top-left {
+  bottom: 50%;
+  transform: translate(-70%, -30px);
+}
+/* line 489, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable > span.top-right {
+  bottom: 50%;
+  transform: translate(-20%, 30px);
+}
+/* line 494, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+.zen-gates__revealable > span.bot {
+  display: none;
+}
+@supports not (clip-path: polygon(0 0, 0 0, 0 0, 0 0)) {
+  /* line 494, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable > span.bot {
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+@media (min-width: 1200px) {
+  /* line 476, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable > span {
+    font-size: 40px;
+    transition: all .3s, bottom .8s;
+  }
+  /* line 506, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable > span.top-left {
+    bottom: 45px;
+    transform: translate(-70%, 0);
+  }
+  /* line 511, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable > span.top-right {
+    bottom: 15px;
+    transform: translate(-20%, 0);
+  }
+  /* line 516, /home/kogo/projects/zenit/app/assets/stylesheets/components/_gates.scss */
+  .zen-gates__revealable > span.bot {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: -1px 1px 2px #fff, 1px 1px 2px #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    opacity: 0;
+  }
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_buildings.scss */
+.zen-buildings {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  /* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_buildings.scss */
+  .zen-buildings {
+    flex-wrap: nowrap;
+  }
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars {
+  display: flex;
+  flex-direction: column;
+}
+/* line 5, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar {
+  position: relative;
+}
+/* line 8, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  transform: translate(50%, 0);
+  background-color: #fff;
+  box-shadow: 0 0 6px 1px #80ffff;
+}
+/* line 20, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar__title {
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 0 0 #80ffff;
+  transition: all .4s;
+}
+/* line 27, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar__title:hover {
+  text-shadow: 0 0 4px #80ffff;
+  cursor: pointer;
+}
+/* line 33, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar:not(:first-child) {
+  margin-top: 20px;
+}
+/* line 37, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar__details {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+/* line 43, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-infobars__bar__details > p {
+  margin: 0;
+  padding: 20px;
+}
+
+/* line 51, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+.zen-buildings .zen-infobars {
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  /* line 51, /home/kogo/projects/zenit/app/assets/stylesheets/components/_infobars.scss */
+  .zen-buildings .zen-infobars {
+    padding: 0;
+    width: 40%;
+    min-width: 330px;
+  }
+}
+
+/* line 1, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+/* line 6, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain {
+  font-size: 40px;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 20px;
+}
+/* line 13, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* line 21, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain__teaser {
+  margin: 30% 0 0;
+  padding: 5px 15px;
+  width: 100%;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 70%);
+  box-sizing: border-box;
+  text-align: left;
+}
+/* line 30, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain.right > .zen-stage__curtain__teaser {
+  background: linear-gradient(-110deg, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0) 80%);
+  text-align: right;
+}
+/* line 35, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain__button {
+  font-size: 28px;
+  display: inline-block;
+  padding: 2px 9px;
+  margin: 30px 60px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  transition: background .4s;
+}
+/* line 46, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain__button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 52, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain.left {
+  float: left;
+  background: url("/assets/zenit-4.jpg") center;
+  text-align: right;
+  transform: scale(0.8) rotateY(15deg);
+}
+/* line 58, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain.left::before {
+  float: right;
+}
+/* line 63, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain.right {
+  float: right;
+  background: url("/assets/zenit-2.jpg") center;
+  transform: scale(0.8) rotateY(-15deg);
+}
+/* line 68, /home/kogo/projects/zenit/app/assets/stylesheets/components/_curtain.scss */
+.zen-stage__curtain.right::before {
+  float: left;
+}
+
+/* line 2, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+html {
+  height: 100%;
+}
+
+/* line 5, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+body {
+  top: 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* line 11, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+body.menu-opened {
+  overflow: hidden;
+}
+
+/* line 16, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+.zen-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (min-width: 544px) {
+  /* line 16, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+  .zen-container {
+    width: 360px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  /* line 16, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+  .zen-container {
+    width: 620px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 16, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+  .zen-container {
+    width: 100%;
+  }
+}
+
+/* line 38, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+.full-width {
+  width: 100%;
+}
+
+/* line 42, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 47, /home/kogo/projects/zenit/app/assets/stylesheets/main.scss */
+.hidden {
+  display: none;
+}

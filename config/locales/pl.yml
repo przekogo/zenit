@@ -1,0 +1,21 @@
+pl:
+  buildings:
+    lotus:
+      name: 'Azure Lotus'
+      description: 'Budynek, z którego każdej ściany tchnąć będzie silny powiew skłaniający do interakcji międzyludzkich. Jego główną siłą będzie moc słowa. Lazurowa niebieskość kojarzona z pięknymi zatokami jest symbolem płynącej, miłej konwersacji. Krystalicznie czyste potoki słów będą miały niezwykłą moc we wnętrzu tego budynku. Zapewniamy, że każda rozmowa biznesowa się uda, a pertraktacje będą owocne dopóki pozostaniecie pod błękitnymi ścianami Azure Lotos. Kwiat Lotosu swoimi jedwabistymi płatkami, którym nie straszne trudy rynku otuli każdą próbę negocjacji magią perswazji.'
+    lily:
+      name: 'Crystal Lily'
+      description: 'To budynek, który lśni w promieniach słońca tysiącem barw. Jest niepowtarzalnym symbolem wolnego ducha artyzmu. Właśnie w nim znajdą miejsce wszyscy, których kreacja niepowtarzalnego jest codziennością, a malowanie wyobraźnią chlebem powszednim. Kryształ istnieje, by skupiać w sobie barwy świata, wypełniać energią każde wnętrze i pozostawiać umysły czystymi i skoncentrowanymi, lilia zaś nadaje nieskazitelnej kreatywności, aby nic nie zmąciło artystycznej weny, ani zaciekłych logicznych rozważań.'
+    orchid:
+      name: 'Golden Orchid'
+      description: 'Luksusowy, pierwszy budynek inwestycji znany przez Łodzian jako Zenit I. Jego marmurowe wnętrze oddycha złotem Orchidei i dotyka tchnieniem wykwintności każdego, kto przekroczy jego progi. Industrialne wypełnienie nie pozwala opuścić mu ducha wspaniałej Łodzi, a czerwona cegła ociepla go, by nie zatonął w chłodzie przezroczystego szkła i ciemnego marmuru. To wyjątkowo zbalansowany budynek dla wszystkich, którzy pragną wnętrza pełnego nowoczesnej wspaniałości okraszonej symbolami stylu przeszłości miejskiej.'
+    rose:
+      name: 'Crimson Rose'
+      description: 'Powierzchnie, które są królewskim wypełnieniem całości inwestycji. Niczym dumna róża Crimson Rose stoi w samym centrum osiedla. Karmazynowe płatki nadają wnętrzom blasku i pasji, a godne arystokratycznego smaku lobby zachwyca niebanalnym wykonaniem. Wejście do budynku to hołd złożony pałacowym wnętrzom dawnych lat, a po przejściu przez drewniane wrota zostaniemy zachwyceni nowoczesnym stylem połączonym z klasyką sztukaterii minionego wieku.'
+    iris:
+      name: 'Lavender Iris'
+      description: 'Wnętrza, w których każdy może czuć się doskonale. Ich zręcznie dostosowujące się ściany dają możliwość wyjątkowym aranżacjom. Główną cechą budynku jest to, że ma on reprezentować własny, niepowtarzalny styl, jednocześnie będąc naznaczony duchem dawnej łódzkiej architektury miejskiej. Fiolet zachęca do tworzenia, a irys to kwiat znany i niemalże codzienny, jak i zachwycający jednocześnie. Właśnie taki ma być ten budynek. Codziennie pogodnie ciepły, a z drugiej strony posiadający swoją niepowtarzalność, dzięki której odznacza się delikatnością i twardym charakterem.'
+    button:
+      spaces: 'wolne powierzchnie'
+      gallery: 'galeria zdjęć'
+      blueprint: 'plan budynku'

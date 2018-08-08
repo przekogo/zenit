@@ -1,18 +1,18 @@
--if location=='home'
-  .zen-header
+/ -if location=='home'
+/   .zen-header
 
-.zen-navbar.js-navbar{class: "#{location == 'home' ? 'js-navbar-expandable' : 'compacted'}",'data-active' => location}
-  .zen-navbar__toggle
-    %span
-    %span
-    %span
-  %a.zen-navbar__button{class: "#{'active' if location == 'history'}", href: '/history'} Historia
-  %a.zen-navbar__button{class: "#{'active' if location == 'about'}", href: '/about'} O nas
-  .zen-navbar__button.highlight{class: "#{'active' if location == 'spaces'}"}
-    %a{href: '/spaces'}
-      Powierzchnie do&nbspwynajęcia
-    .zen-navbar__logo
-      %a{href: '/'}
-        %img{src: '/assets/logo.png'}
-  %a.zen-navbar__button{class: "#{'active' if location == 'buildings'}", href: '/buildings'} Inwestycja
-  %a.zen-navbar__button{class: "#{'active' if location == 'contact'}", href: '/contact'} Kontakt
+/ .zen-navbar.js-navbar{class: "#{location == 'home' ? 'js-navbar-expandable' : 'compacted'}",'data-active' => location}
+/   .zen-navbar__toggle
+/     %span
+/     %span
+/     %span
+/   %a.zen-navbar__button{class: "#{'active' if location == 'history'}", href: '/history'} Historia
+/   %a.zen-navbar__button{class: "#{'active' if location == 'about'}", href: '/about'} O nas
+/   .zen-navbar__button.highlight{class: "#{'active' if location == 'spaces'}"}
+/     %a{href: '/spaces'}
+/       Powierzchnie do&nbspwynajęcia
+/     .zen-navbar__logo
+/       %a{href: '/'}
+/         %img{src: '/assets/logo.png'}
+/   %a.zen-navbar__button{class: "#{'active' if location == 'buildings'}", href: '/buildings'} Inwestycja
+/   %a.zen-navbar__button{class: "#{'active' if location == 'contact'}", href: '/contact'} Kontakt
