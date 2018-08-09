@@ -1,0 +1,75 @@
+.zen-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  cursor: pointer;
+  background: rgba($color-black, .9);
+  z-index: 5;
+  transition: opacity .3s;
+
+  &.inactive {
+    opacity: 0;
+    cursor: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-image: asset-data-url('icon-close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    @media #{$lg-up} {
+      display: none;
+    }
+  }
+}
+
+.zen-modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  max-height: calc(100% - 60px);
+  background: $color-white;
+  overflow: hidden;
+  transform: translateY(calc(60px - 50%));
+  cursor: auto;
+
+  @media #{$lg-up} {
+    left: 50%;
+    width: unset;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-height: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+
+  &__title, &__footer {
+    max-height: 40px;
+  }
+
+  &__content {
+    height: 100%;
+
+    img {
+      max-height: calc(100vh - 60px);
+
+      @media #{$lg-up} {
+        max-height: 80vh;
+      }
+    }
+  }
+}
