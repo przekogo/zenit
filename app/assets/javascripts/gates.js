@@ -29,6 +29,9 @@ function initGateButtons() {
   $buttons.on('click', function() {
     building = $(this).attr('data-building');
     type = $(this).attr('data-type');
+    if (type=='blueprint') {
+      return;
+    }
     $.ajax({
       url: '/' + type,
       type: 'get',

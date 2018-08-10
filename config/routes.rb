@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'curtain', to: 'home#curtain'
 
+  get 'timeline', to: 'home#timeline'
+
   get 'contact', to: 'menu#contact', format: 'html'
   get 'gallery', to: 'galleries#fetch', format: 'html'
   get 'spaces', to: 'spaces#fetch', format: 'html'
