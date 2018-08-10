@@ -30,5 +30,5 @@ function openModal() {
       $('.zen-backdrop').removeClass('inactive');
     },
     50
-  )
+  );
 }

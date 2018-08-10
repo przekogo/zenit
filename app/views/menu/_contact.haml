@@ -1,15 +1,13 @@
-=render partial: 'layouts/navbar', locals: {location: 'contact'}
-.zen-container
+.zen-contact__info
+  Zenit sp z o.o. 90-318 Łódź ul. Sienkiewicza 82/84 tel.42 66 30 601, sekretariat@zenit.pl REGON 731632889 NIP 8291626799
+.zen-contact
   .zen-map
     #zen_map_main.zen-map__google-map
   .zen-form.js-validate
+    .zen-form__title
+      Napisz do nas
     =form_tag 'contact/mail', method: 'post', remote: true, id: 'contact_form', class: 'js-validate' do
       =text_field_tag :name, nil, class: 'zen-form__field', placeholder: 'Imię i nazwisko lub nazwa firmy'
       =text_field_tag :email, nil, class: 'zen-form__field', placeholder: 'Email'
       =text_area_tag :message, nil, class: 'zen-form__field', rows: 5, placeholder: 'Treść wiadomości'
-      =button_tag 'Dostarcz', type: 'submit', class: 'zen-form__button'
-    .row
-      %p.disclaimer
-        * lorem ipsum
-      %p.disclaimer
-        ** ipsum lorem
+      =button_tag 'Wyślij', type: 'submit', class: 'zen-form__button'

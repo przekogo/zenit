@@ -13169,7 +13169,7 @@ function initGateButtons() {
   $buttons.on('mouseover', function() {
     $tooltips = $(this).siblings('.zen-gate__tooltip');
     $tooltips.addClass('transparent');
-    $tooltips.filter('[data-tooltip=' + $(this).attr('data-tooltip') + ']').removeClass('transparent');
+    $tooltips.filter('[data-type=' + $(this).attr('data-type') + ']').removeClass('transparent');
   });
 
   $buttons.on('mouseout', function() {

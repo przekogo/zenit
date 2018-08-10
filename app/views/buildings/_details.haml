@@ -4,15 +4,15 @@
   .zen-gate__description
     = t "buildings.#{building}.description"
   .zen-gate__actions
-    .zen-gate__button.spaces{'data-tooltip' => 'spaces'}
+    .zen-gate__button.spaces{'data-type' => 'spaces', 'data-building' => building}
       %span
-    .zen-gate__button.gallery{'data-tooltip' => 'gallery'}
+    .zen-gate__button.gallery{'data-type' => 'gallery', 'data-building' => building}
       %span
-    .zen-gate__button.blueprint{'data-tooltip' => 'blueprint'}
+    .zen-gate__button.blueprint{'data-type' => 'blueprint', 'data-building' => building}
       %span
-    .zen-gate__tooltip.transparent{'data-tooltip' => 'spaces'}
+    .zen-gate__tooltip.transparent{'data-type' => 'spaces'}
       = t "buildings.button.spaces"
-    .zen-gate__tooltip.transparent{'data-tooltip' => 'gallery'}
+    .zen-gate__tooltip.transparent{'data-type' => 'gallery'}
       = t "buildings.button.gallery"
-    .zen-gate__tooltip.transparent{'data-tooltip' => 'blueprint'}
+    .zen-gate__tooltip.transparent{'data-type' => 'blueprint'}
       = t "buildings.button.blueprint"

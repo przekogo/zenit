@@ -1,7 +1,5 @@
-.zen-backdrop
+.zen-backdrop.inactive.hidden
   .zen-backdrop__close
-  .zen-modal
-    .zen-modal__title
+  .zen-modal.loading
+    =render partial: 'components/spinner'
     .zen-modal__content
-      =render partial: 'components/slider.haml'
-    .zen-modal__footer

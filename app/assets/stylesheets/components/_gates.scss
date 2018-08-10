@@ -93,6 +93,7 @@
       background-position: 0 100%;
       color: $color-white;
       overflow: hidden;
+      z-index: 1;
       transition: background-position .5s;
 
       &__title {
@@ -115,7 +116,7 @@
         margin: 150px 10% 0 10%;
         width: 80%;
         text-align: center;
-        font-size: 25px;
+        font-size: 28px;
         transition: opacity .5s,
                     margin .5s;
         z-index: 2;
@@ -129,12 +130,12 @@
         opacity: 0;
         display: flex;
         flex-direction: row;
+        justify-content: space-around; // edge compatibility
         justify-content: space-evenly;
         position: absolute;
         bottom: 90px;
         width: 100%;
         transition: opacity .5s;
-        z-index: 1;
       }
 
       &__button {
@@ -354,7 +355,7 @@
       }
 
       &::before {
-        background: url('zenit-1.jpg') center;
+        background: url('rose-3.jpg') center;
         background-size: cover;
       }
 
@@ -381,7 +382,7 @@
       }
 
       &::before {
-        background: url('zenit-2.jpg') center;
+        background: url('rose-4.jpg') center;
         background-size: cover;
       }
 
@@ -462,7 +463,7 @@
       }
 
       &::before {
-        background: url('zenit-2.jpg') center;
+        background: url('orchid-2.jpg') center;
         background-size: cover;
       }
 

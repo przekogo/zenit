@@ -43,12 +43,12 @@
   max-height: calc(100% - 60px);
   background: $color-white;
   overflow: hidden;
-  transform: translateY(calc(60px - 50%));
+  transform: translateY(calc(30px - 50%));
   cursor: auto;
 
   @media #{$lg-up} {
     left: 50%;
-    width: unset;
+    width: unset; // edge compatibility
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -57,12 +57,14 @@
     border-radius: 10px;
   }
 
-  &__title, &__footer {
-    max-height: 40px;
-  }
-
   &__content {
     height: 100%;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+
+    @media #{$lg-up} {
+      max-height: 80vh;
+    }
 
     img {
       max-height: calc(100vh - 60px);

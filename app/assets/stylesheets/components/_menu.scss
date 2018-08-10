@@ -1,0 +1,59 @@
+.zen-menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  transition: width .5s;
+
+  @media #{$lg-up} {
+    @for $i from 1 to 5 {
+      div:nth-child(#{$i}) {
+        transition: top #{$i * .2}s,
+                    border-radius #{($i) * .2}s ease #{($i) * .1}s,
+                    background-color #{($i) * .2}s;
+      }
+    }
+  }
+
+  &__nav:last-child{
+    border-bottom-right-radius: 5px;
+  }
+
+  &__nav {
+    position: relative;
+    top: 0;
+    padding: 15px;
+    background-color: rgba($color-white, .7);
+
+    img {
+      height: 60px;
+      transform: scale(1);
+      transition: transform .3s;
+
+      @media #{$lg-up} {
+        height: 50px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &.folded {
+    @media #{$lg-up} {
+      @for $i from 1 to 5 {
+        div:nth-child(#{$i}) {
+          top: calc(#{((10/$i) * 7) - 70}px);
+          border-bottom-right-radius: calc(#{((10/$i) * 2)}px);
+        }
+      }
+    }
+  }
+
+  &.folded &__nav {
+    background-color: rgba($color-white, .5);
+  }
+}

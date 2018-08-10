@@ -1,0 +1,53 @@
+$rz-spinner-offset: 187;
+$rz-spinner-duration: 1.4s;
+
+.rz-spinner {
+  display: none;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  animation: rz-spinner-rotator $rz-spinner-duration linear infinite;
+
+  &__path {
+    stroke-dasharray: $rz-spinner-offset;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation:
+      rz-spinner-dash $rz-spinner-duration ease-in-out infinite,
+      rz-spinner-colors ($rz-spinner-duration*4) ease-in-out infinite;
+  }
+}
+
+@keyframes rz-spinner-rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+
+@keyframes rz-spinner-colors {
+  0% { stroke: $color-azure; }
+  25% { stroke: $color-crystal; }
+  50% { stroke: $color-golden; }
+  75% { stroke: $color-crimson; }
+  100% { stroke: $color-lavender; }
+}
+
+@keyframes rz-spinner-dash {
+  0% { stroke-dashoffset: $rz-spinner-offset; }
+  50% {
+    stroke-dashoffset: $rz-spinner-offset / 4;
+    transform:rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: $rz-spinner-offset;
+    transform:rotate(450deg);
+  }
+}
+
+.loading {
+  background-color: rgba($color-white, 0);
+
+  > .rz-spinner {
+    display: block;
+  }
+}

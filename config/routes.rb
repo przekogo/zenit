@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'home#index'
+  root to: 'buildings#index'
 
   get 'buildings', to: 'buildings#index'
   get 'buildings/lotus', to: 'buildings#lotus'
@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   get 'buildings/orchid', to: 'buildings#orchid'
   get 'buildings/rose', to: 'buildings#rose'
   get 'buildings/iris', to: 'buildings#iris'
-  get 'contact', to: 'contact#index'
 
   get 'curtain', to: 'home#curtain'
+
+  get 'contact', to: 'menu#contact', format: 'html'
+  get 'gallery', to: 'galleries#fetch', format: 'html'
+  get 'spaces', to: 'spaces#fetch', format: 'html'
 
   post 'contact/mail', to: 'contact#mail', format: 'js'
 end
