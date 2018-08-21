@@ -5,11 +5,11 @@
     = t "buildings.#{building}.description"
   .zen-gate__actions
     .zen-gate__button.spaces{'data-type' => 'spaces', 'data-building' => building}
-      %span
+      %span.icon
     .zen-gate__button.gallery{'data-type' => 'gallery', 'data-building' => building}
-      %span
+      %span.icon
     %a.zen-gate__button.blueprint{'data-type' => 'blueprint', 'data-building' => building, href: 'assets/orchid-1.pdf', target: 'blank'}
-      %span
+      %span.icon
     .zen-gate__tooltip.transparent{'data-type' => 'spaces'}
       = t "buildings.button.spaces"
     .zen-gate__tooltip.transparent{'data-type' => 'gallery'}

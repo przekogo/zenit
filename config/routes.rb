@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   get 'buildings/rose', to: 'buildings#rose'
   get 'buildings/iris', to: 'buildings#iris'
 
-  get 'curtain', to: 'home#curtain'
-
   get 'timeline', to: 'home#timeline'
 
   get 'contact', to: 'menu#contact', format: 'html'

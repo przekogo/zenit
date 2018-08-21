@@ -5,11 +5,14 @@ $(function() {
 
 function initGates() {
   $gates = $(this).children('.zen-gates__revealable');
-  $gates.on('click', function() {
-    if (!$(this).hasClass('active')) {
+  $gates.on('click', function(e) {
+    if ($(e.target).attr('class') == 'icon') {
+      return;
+    }
+    else if (!$(this).hasClass('active')) {
       $gates.removeClass('active');
     }
-      $(this).addClass('active');
+    $(this).toggleClass('active');
   });
 }
 
