@@ -12,13 +12,24 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    text-align: center;
+    color: $color-white;
+    text-shadow: -15px 5px 2px $color-black;
     z-index: 0;
+
+    @media #{$lg-up} {
+      padding: 0;
+    }
 
     &.previous {
       top: -50%;
     }
 
     &.active {
+      text-shadow: 5px 5px 2px $color-black;
+    }
+
+    &.active, &.start {
       top: 0;
       z-index: 1;
     }
@@ -38,32 +49,150 @@
                   bottom 1s;
     }
 
+    &.home {
+      background-image: url('home.jpg');
+    }
+
     &.spaces {
-      background-image: url('zenit-1.jpg');
+      background-image: url('powierzchnie.jpg');
     }
 
     &.buildings {
-      background-image: url('zenit-2.jpg');
+      background-image: url('inwestycja.jpg');
     }
 
     &.history {
-      background-image: url('zenit-3.jpg');
+      background-image: url('historia.jpg');
     }
 
     &.contact {
-      background-image: url('zenit-4.jpg');
+      background-image: url('contact.jpg');
+      background-position: top right;
     }
 
     &.news {
-      background-image: url('zenit-2.jpg');
+      background-image: url('news.jpg');
     }
-  }
 
-  @media #{$md-up} {
+    &.news &__content {
+      width: 100%;
+      height: 100%;
+      padding-top: 95px;
+      margin: 0;
+      margin-right: -20px;
 
-  }
+      @media #{$md-up} {
+        padding-top: 127px;
+      }
 
-  @media #{$lg-up} {
-    padding: 0;
+      @media #{$lg-up} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        float: right;
+        padding: 0;
+        width: calc(100% - 730px);
+        height: 100%;
+      }
+    }
+
+    &__head {
+      float: right;
+      width: 100%;
+      margin-top: 110px;
+
+      @media #{$md-up} {
+        margin-top: 140px;
+      }
+
+      @media #{$lg-up} {
+        margin: 30px 30px 0 0;
+        transform: translate(25%, 0);
+      }
+
+      > div {
+        transform: translate(70px, 0);
+        opacity: 0;
+        transition: transform 0s ease 1s,
+                    text-shadow 0s ease 1s,
+                    opacity 1s;
+      }
+
+      .logo {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        background-image: url('logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media #{$lg-up} {
+          height: 250px;
+          width: 250px;
+        }
+      }
+
+      .title {
+        font-family: $ff-base-bold;
+        font-size: $fs-title-md;
+        line-height: $fs-title-md;
+
+        @media #{$lg-up} {
+          font-size: 70px;
+          line-height: 70px;
+        }
+      }
+    }
+
+    &__content {
+      float: right;
+      width: 50%;
+      margin-top: 40px;
+      text-align: left;
+      font-family: $ff-base-bold;
+      font-size: $fs-header-md;
+      font-weight: 600;
+      opacity: 0;
+      transform: translate(25px, 0);
+      transition: transform 0s ease 1s,
+                  text-shadow 0s ease 1s,
+                  opacity 1s;
+
+      @media #{$lg-up} {
+        width: unset;
+        margin-right: 5%;
+        font-size: $fs-header;
+      }
+    }
+
+    &.active &__head {
+      > div {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      .logo {
+        transition: opacity 4s ease .4s;
+      }
+
+      .title {
+        transition: transform 4s ease-out 1s,
+                    text-shadow 4s ease 1s,
+                    opacity 3s ease 1s;
+      }
+    }
+
+    &.active &__content {
+      transform: translate(0, 0);
+      opacity: 1;
+      transition: transform 1.5s ease-out 2s,
+                  text-shadow 1.5s ease 2s,
+                  opacity 1s ease 2s;
+    }
+    &.active.news &__content {
+      transition: transform 1.5s ease-out .5s,
+                  text-shadow 1.5s ease .5s,
+                  opacity 1s ease .5s;
+    }
   }
 }

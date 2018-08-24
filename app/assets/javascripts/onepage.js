@@ -9,6 +9,8 @@ function initOnePage() {
   delay = 1100;
   active = true;
 
+  $('.rz-onepage__page.start').addClass('active').removeClass('start');
+
   $(window).on('keydown', function(e) {
     if ($(window).width() < 1200) { return; }
     // disable up down pgup pgdn home end
@@ -18,6 +20,7 @@ function initOnePage() {
   });
 
   $(window).on('wheel', function(event){
+    if ($(event.target).closest('.rz-news').length > 0) { return; }
     event.preventDefault();
     if(event.originalEvent.deltaY > 0){
       moveToPage('next');

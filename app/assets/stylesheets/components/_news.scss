@@ -1,0 +1,39 @@
+.rz-news {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 40px 40px 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__article {
+    margin-bottom: 20px;
+
+    .title {
+      margin-left: 20%;
+    }
+
+    .content {
+      font-family: $ff-base;
+      font-size: $fs-header-sm;
+      line-height: $fs-lg;
+      font-weight: 400;
+      color: $color-black;
+      text-shadow: 0 0 0 $color-black;
+    }
+  }
+
+  .scrollbar {
+    content: '';
+    position: absolute;
+    top: 6%;
+    bottom: 6%;
+    right: 50px;
+    width: 16px;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      rgba($color-lavender, 0),
+      rgba($color-lavender, 1) 0%,
+      rgba($color-lavender, 0))
+  }
+}

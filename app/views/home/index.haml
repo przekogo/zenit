@@ -1,7 +1,40 @@
 =render partial: 'layouts/menu', locals: {home: true}
 .rz-onepage
-  .rz-onepage__page.spaces.active{'data-link' => 'spaces'}
+  .rz-onepage__page.home.start
+    .rz-onepage__page__head
+      .logo
+      .title
+        Zenit Blossom Center
+    %a.rz-onepage__page__content{href: root_path}
+      Kwitnący ogród
+      %br
+      w centrum miasta...
+  .rz-onepage__page.spaces.next{'data-link' => 'spaces'}
+    .rz-onepage__page__head
+      .logo
+      .title
+        Zenit Blossom Center
+    %a.rz-onepage__page__content{href: buildings_path}
+      Wolne powierzchnie
+      %br
+      w kwitnącym centrum.
   .rz-onepage__page.buildings.next{'data-link' => 'buildings'}
+    .rz-onepage__page__head
+      .logo
+      .title
+        Zenit Blossom Center
+    %a.rz-onepage__page__content{href: buildings_path}
+      Wciąż się rozrastamy
   .rz-onepage__page.history.next{'data-link' => 'history'}
+    .rz-onepage__page__head
+      .logo
+      .title
+        Zenit Blossom Center
+    %a.rz-onepage__page__content{href: timeline_path}
+      Mury pełne
+      %br
+      historycznych wartości...
   .rz-onepage__page.contact.next{'data-link' => 'contact'}
   .rz-onepage__page.news.next{'data-link' => 'news'}
+    .rz-onepage__page__content
+      =render partial: 'components/news'
