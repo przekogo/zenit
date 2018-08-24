@@ -5,6 +5,7 @@ $(function() {
 });
 
 function initOnePage() {
+  $menu = $('.zen-main-menu');
   $menuItems = $('.zen-main-menu__nav');
   delay = 1100;
   active = true;
@@ -31,6 +32,7 @@ function initOnePage() {
   });
 
   $menuItems.on('click', function() {
+    $menu.removeClass('open');
     if ($(this).hasClass('active')) { return 0; }
     page = $(this).attr('data-link');
     moveToPage(page);

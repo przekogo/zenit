@@ -187,6 +187,7 @@
 
   &.open &__nav {
     display: flex;
+    flex-basis: unset;
     align-items: center;
     width: 100%;
 
