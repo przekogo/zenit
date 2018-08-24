@@ -1,5 +1,6 @@
 $(function() {
   $('.zen-menu').each(initMenu);
+  $('.contact').each(initContactLink);
 });
 
 function initMenu() {
@@ -8,8 +9,10 @@ function initMenu() {
   }).on('mouseout', function() {
     $(this).addClass('folded');
   });
+}
 
-  $(this).find('.contact').on('click', function() {
+function initContactLink() {
+  $(this).on('click', function() {
     $.ajax({
       url: '/contact',
       type: 'get',
@@ -21,7 +24,7 @@ function initMenu() {
     }).done(function(html) {
       $('.zen-modal__content').html(html);
       $('.zen-modal').removeClass('loading');
-      $('.js-validate').each(initFormValidator);
+      $('.zen-modal').find('.js-validate').each(initFormValidator);
       initGoogleMaps();
     });
     openModal();

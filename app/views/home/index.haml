@@ -1,7 +1,7 @@
-=render partial: 'layouts/navbar', locals: {location: 'home'}
-.zen-slider.js-slider
-  %img.zen-slider__image.js-slide{src: 'assets/zenit-1.jpg'}
-  %img.zen-slider__image.js-slide{src: 'assets/zenit-2.jpg'}
-  %img.zen-slider__image.js-slide{src: 'assets/zenit-3.jpg'}
-  %img.zen-slider__image.js-slide.active{src: 'assets/zenit-4.jpg'}
-=render partial: 'layouts/showcase'
+=render partial: 'layouts/menu', locals: {home: true}
+.rz-onepage
+  .rz-onepage__page.spaces.active{'data-link' => 'spaces'}
+  .rz-onepage__page.buildings.next{'data-link' => 'buildings'}
+  .rz-onepage__page.history.next{'data-link' => 'history'}
+  .rz-onepage__page.contact.next{'data-link' => 'contact'}
+  .rz-onepage__page.news.next{'data-link' => 'news'}

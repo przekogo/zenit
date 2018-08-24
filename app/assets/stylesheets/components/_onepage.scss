@@ -1,0 +1,69 @@
+.rz-onepage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+
+  &__page {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+    &.previous {
+      top: -50%;
+    }
+
+    &.active {
+      top: 0;
+      z-index: 1;
+    }
+
+    &.fade-up {
+      top: -100%;
+      z-index: 2;
+    }
+
+    &.fade-down {
+      top: 100%;
+      z-index: 2;
+    }
+
+    &.active, &.fade-up, &.fade-down {
+      transition: top 1s,
+                  bottom 1s;
+    }
+
+    &.spaces {
+      background-image: url('zenit-1.jpg');
+    }
+
+    &.buildings {
+      background-image: url('zenit-2.jpg');
+    }
+
+    &.history {
+      background-image: url('zenit-3.jpg');
+    }
+
+    &.contact {
+      background-image: url('zenit-4.jpg');
+    }
+
+    &.news {
+      background-image: url('zenit-2.jpg');
+    }
+  }
+
+  @media #{$md-up} {
+
+  }
+
+  @media #{$lg-up} {
+    padding: 0;
+  }
+}
