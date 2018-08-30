@@ -75,7 +75,7 @@
     }
 
     &.news &__content {
-      width: 100%;
+      width: calc(100% + 20px);
       height: 100%;
       padding-top: 95px;
       margin: 0;
@@ -93,6 +93,7 @@
         padding: 0;
         width: calc(100% - 730px);
         height: 100%;
+        max-width: 1000px;
       }
     }
 

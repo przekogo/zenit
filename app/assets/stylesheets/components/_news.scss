@@ -1,25 +1,66 @@
 .rz-news {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 40px 40px 40px 0;
-  max-height: 100%;
-  overflow-y: auto;
+  height: 100%;
+  width: calc(100% + 20px);
+  overflow-y: scroll;
   overflow-x: hidden;
+  background-color: rgba($color-black, .4);
+
+  @media #{$lg-up} {
+    background-color: unset;
+  }
 
   &__article {
+    padding: 0 40px;
     margin-bottom: 20px;
 
     .title {
+      position: relative;
       margin-left: 20%;
+      cursor: pointer;
+
+      &:after {
+        content: '\2219';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        margin-left: 10px;
+        transform: scale(.7);
+        transition: transform .2s;
+      }
+    }
+
+    &.active, &:hover {
+      .title {
+        &:after {
+          content: '\2219';
+          transform: scale(1);
+        }
+      }
     }
 
     .content {
-      font-family: $ff-base;
-      font-size: $fs-header-sm;
-      line-height: $fs-lg;
-      font-weight: 400;
-      color: $color-black;
-      text-shadow: 0 0 0 $color-black;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height .5s;
+
+      > p {
+        margin: 0;
+        padding: 0;
+        font-family: $ff-base;
+        font-size: $fs-header-sm;
+        line-height: $fs-lg;
+        font-weight: 400;
+        text-shadow: 0 0 1px $color-black;
+
+        @media #{$lg-up} {
+          color: $color-black;
+          text-shadow: 0 0 1px $color-white;
+        }
+      }
     }
   }
 
