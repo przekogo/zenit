@@ -24,7 +24,7 @@
     transition: margin .5s,;
 
     img {
-      height: 80px;
+      height: 100px;
       transform: scale(1);
       transition: transform .3s;
       z-index: 1;
@@ -45,7 +45,11 @@
       z-index: -1;
       transition: transform .3s;
       font-family: $ff-deco;
-      font-size: $fs-lg;
+      font-size: $fs-header;
+
+      @media #{$lg-up} {
+        font-size: $fs-lg;
+      }
     }
 
     &:hover {
