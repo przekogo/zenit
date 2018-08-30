@@ -1,59 +1,84 @@
 .zen-menu {
   display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
-  left: 0;
-  overflow: hidden;
+  right: 0;
+  background-color: $color-white;
+  border-bottom-left-radius: 40px;
   z-index: 2;
   transition: width .5s;
 
-  @media #{$lg-up} {
-    @for $i from 1 to 5 {
-      div:nth-child(#{$i}) {
-        transition: top #{$i * .2}s,
-                    border-radius #{($i) * .2}s ease #{($i) * .1}s,
-                    background-color #{($i) * .2}s;
-      }
-    }
-  }
-
-  &__nav:last-child{
-    border-bottom-right-radius: 5px;
+  &__nav:first-child {
+    margin-top: 0;
+    z-index: 2;
   }
 
   &__nav {
     position: relative;
-    top: 0;
     padding: 15px;
-    background-color: rgba($color-white, .7);
+    margin-top: -100%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 40px;
+    background-color: $color-white;
+    transition: margin .5s,;
 
     img {
-      height: 60px;
+      height: 80px;
       transform: scale(1);
       transition: transform .3s;
+      z-index: 1;
 
       @media #{$lg-up} {
-        height: 50px;
+        height: 60px;
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      padding: 2px 6px;
+      transform: translate(0, -50%);
+      border-radius: 20px;
+      background-color: $color-white;
+      z-index: -1;
+      transition: transform .3s;
+      font-family: $ff-deco;
+      font-size: $fs-lg;
+    }
+
+    &:hover {
+      img {
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
-      &:hover {
-        transform: scale(1.2);
+      .label {
+        transform: translate(-110%, -50%);
       }
     }
   }
 
-  &.folded {
-    @media #{$lg-up} {
-      @for $i from 1 to 5 {
-        div:nth-child(#{$i}) {
-          top: calc(#{((10/$i) * 7) - 70}px);
-          border-bottom-right-radius: calc(#{((10/$i) * 2)}px);
+  &.open &__nav {
+    margin-top: 0;
+
+    .label {
+      transform: translate(-110%, -50%);
+
+      @media #{$lg-up} {
+        transform: translate(0, -50%);
+      }
+    }
+
+    &:hover {
+
+      .label {
+        @media #{$lg-up} {
+          transform: translate(-110%, -50%);
         }
       }
     }
-  }
-
-  &.folded &__nav {
-    background-color: rgba($color-white, .5);
   }
 }

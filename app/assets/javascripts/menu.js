@@ -1,13 +1,12 @@
 $(function() {
-  $('.zen-menu').each(initMenu);
+  $('.js-menu-expandable').each(initMenuToggle);
   $('.contact').each(initContactLink);
 });
 
-function initMenu() {
-  $(this).on('mouseover', function() {
-    $(this).removeClass('folded');
-  }).on('mouseout', function() {
-    $(this).addClass('folded');
+function initMenuToggle() {
+  var $menu = $(this);
+  $menu.find('.rz-toggle:first').on('click', function() {
+    $menu.toggleClass('open');
   });
 }
 

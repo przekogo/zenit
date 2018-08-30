@@ -1,8 +1,4 @@
 $(function() {
-  if ($('.js-menu-expandable').length) {
-    $(window).scroll(compactMenu);
-  }
-  $('.js-menu-expandable').each(initMenuToggle);
   $('.js-slider').each(initSlider);
   $('#zen_map_main').each(initGoogleMaps);
 });
@@ -23,29 +19,6 @@ function initSlider() {
       }
     });
   }, 15000);
-}
-
-function compactMenu() {
-  if ($(window).width() < 768) {
-    return;
-  }
-  var $menu = $('.js-menu-expandable');
-  if (!$menu.hasClass('compacted') && $(window).scrollTop() == 0) {
-    return;
-  }
-  if ($menu.hasClass('compacted') && $(window).scrollTop() == 0) {
-    $menu.toggleClass('compacted');
-  }
-  else if (!$menu.hasClass('compacted') && $(window).scrollTop() != 0) {
-    $menu.toggleClass('compacted');
-  }
-}
-
-function initMenuToggle() {
-  var $menu = $(this);
-  $menu.find('.rz-toggle').on('click', function() {
-    $menu.toggleClass('open');
-  });
 }
 
 function initZenMapMain() {

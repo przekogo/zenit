@@ -11,6 +11,7 @@
 
   @media #{$md-up} {
     display: none;
+    margin: 5px auto -5px auto;
   }
 
   & > span {
@@ -40,7 +41,11 @@
 
 }
 
-.open > .rz-toggle {
+.zen-menu__nav > .rz-toggle {
+  display: block;
+}
+
+.open > .rz-toggle, .open > .zen-menu__nav > .rz-toggle {
 
   @media #{$md-up} {
     display: block;

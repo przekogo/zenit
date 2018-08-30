@@ -20,16 +20,25 @@
       %img{src: 'assets/icon-buildings.svg'}
       %span news
 - else
-  .zen-menu
+  .zen-menu.js-menu-expandable
+    .zen-menu__nav
+      .rz-toggle
+        %span
+        %span
+        %span
     .zen-menu__nav
       %a{href: '/'}
         %img.home{src: 'assets/logo.png'}
+      .label home
     .zen-menu__nav
       %a{href: '/buildings'}
         %img.buildings{src: 'assets/icon-buildings.svg'}
+      .label inwestycja
     .zen-menu__nav
       %a{href: '/timeline'}
         %img.timeline{src: 'assets/icon-hourglass.svg'}
+      .label historia
     .zen-menu__nav
       %a{href: '#'}
         %img.contact{src: 'assets/icon-envelope.svg'}
+      .label kontakt
