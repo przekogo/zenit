@@ -1,7 +1,6 @@
 .rz-news {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 40px 40px 40px 0;
   height: 100%;
   width: calc(100% + 20px);
@@ -11,6 +10,10 @@
 
   @media #{$lg-up} {
     background-color: unset;
+  }
+
+  &__wrapper {
+    margin: auto 0;
   }
 
   &__article {
