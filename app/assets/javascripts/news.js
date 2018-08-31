@@ -9,7 +9,6 @@ function initNews() {
   $articles = $wrapper.find('.rz-news__article');
 
   $container.on('scroll', function() {
-    console.log(scrollPercentage());
     $scrollbar.css("background-image", "linear-gradient(rgba(179, 102, 255, 0), rgba(179, 102, 255, 1) " + scrollPercentage() + "%, rgba(179, 102, 255, 0))");
   });
 
@@ -33,7 +32,6 @@ function initNews() {
   }
 
   function expandArticle($collapsible) {
-      console.log($collapsible.children('p').outerHeight());
     $collapsible.css('max-height', $collapsible.find('p').outerHeight());
   }
 
