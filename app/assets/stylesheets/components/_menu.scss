@@ -70,9 +70,11 @@
 
     .label {
       transform: translate(-110%, -50%);
+      transition: transform .3s ease .3s;
 
       @media #{$lg-up} {
         transform: translate(0, -50%);
+        transition: transform .3s;
       }
     }
 
