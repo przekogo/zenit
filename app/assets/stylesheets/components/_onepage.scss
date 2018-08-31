@@ -174,7 +174,7 @@
       font-family: $ff-deco;
       font-size: $fs-header-sm;
 
-      > span {
+      > a {
         float: right;
         padding: 8px 25px;
         margin-right: 200px;
@@ -184,6 +184,7 @@
                     inset 0 0 10px 5px $color-crystal;
         opacity: 0;
         transform: scale(.8);
+        cursor: pointer;
         transition: opacity 1s ease .5s,
                     transform 1s ease .5s,
                     background-color .5s,
@@ -221,7 +222,7 @@
                   opacity 1s ease 2s;
     }
 
-    &.active &__link-button > span {
+    &.active &__link-button > a {
       opacity: 1;
       transform: scale(1);
       transition: opacity 2.7s ease 2.5s,

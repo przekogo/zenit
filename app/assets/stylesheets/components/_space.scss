@@ -1,0 +1,63 @@
+.zen-spaces {
+  width: 100vw;
+  font-size: $fs-header;
+
+  @media #{$lg-up} {
+    width: 80vw;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    font-size: $fs-title;
+    text-align: center;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+
+    > div {
+      width: 50%;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  &__level, &__surface {
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 1px $color-crimson;
+
+    > span {
+      margin: 10px 50px;
+
+      &::before {
+        content: url('icon-check-mark');
+      }
+    }
+  }
+
+  .segment {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      border-top: 1px solid $color-crimson;
+      box-shadow: 0 0 1px $color-crimson;
+    }
+  }
+}

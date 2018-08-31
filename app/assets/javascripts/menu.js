@@ -1,6 +1,6 @@
 $(function() {
   $('.js-menu-expandable').each(initMenuToggle);
-  $('.contact').each(initContactLink);
+  $('[data-modal="contact"]').each(initContactLink);
 });
 
 function initMenuToggle() {

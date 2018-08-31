@@ -7,6 +7,24 @@ body {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
+  // Background pattern from Toptal Subtle Patterns
+  background-image: url('full-bloom.png');
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(
+                        rgba($color-green, 0) 0%,
+                        rgba($color-green, .22) 33%,
+                        rgba($color-green, .22) 66%,
+                        rgba($color-green, 0) 100%
+                      );
+    z-index: -2;
+  }
 
   &.menu-opened {
     overflow: hidden;

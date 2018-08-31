@@ -1,4 +1,6 @@
 class SpacesController < ApplicationController
+def index ; end
+
   def fetch
     respond_to do |format|
       format.html {

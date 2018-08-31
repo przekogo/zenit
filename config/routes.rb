@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'menu#contact', format: 'html'
   get 'gallery', to: 'galleries#fetch', format: 'html'
-  get 'spaces', to: 'spaces#fetch', format: 'html'
+  get 'space', to: 'spaces#fetch', format: 'html'
+
+  get 'spaces', to: 'spaces#index'
 
   post 'contact/mail', to: 'contact#mail', format: 'js'
 end

@@ -25,3 +25,28 @@
     }
   }
 }
+
+.rz-contact {
+  float: right;
+  margin: 35px 40% 0 0;
+  text-align: left;
+  color: $color-black;
+  text-shadow: 0 0 0 $color-black;
+  font-size: $fs-lg;
+  font-family: $ff-deco;
+  line-height: $fs-header;
+
+  @media #{$lg-up} {
+    margin-right: 20%;
+  }
+
+  &__item {
+    &.head {
+      font-size: $fs-header-sm;
+
+      > span {
+        font-size: $fs-md;
+      }
+    }
+  }
+}
