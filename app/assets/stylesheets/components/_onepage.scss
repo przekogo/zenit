@@ -107,8 +107,8 @@
       }
 
       @media #{$lg-up} {
-        margin: 30px 30px 0 0;
-        transform: translate(25%, 0);
+        margin: 30px 0 0 0;
+        transform: translate(10%, 0);
       }
 
       > div {
@@ -135,23 +135,23 @@
 
       .title {
         font-family: $ff-base-bold;
-        font-size: $fs-title-md;
-        line-height: $fs-title-md;
+        font-size: $fs-title-lg;
+        line-height: $fs-title-lg;
 
         @media #{$lg-up} {
-          font-size: 70px;
-          line-height: 70px;
+          font-size: $fs-title-lg;
+          line-height: $fs-title-lg;
         }
       }
     }
 
     &__content {
       float: right;
-      width: 50%;
-      margin-top: 40px;
+      max-width: 80%;
+      margin: 40px 10% 0 0;
       text-align: left;
       font-family: $ff-base-bold;
-      font-size: $fs-header-md;
+      font-size: $fs-header-lg;
       font-weight: 600;
       opacity: 0;
       transform: translate(25px, 0);
@@ -160,9 +160,9 @@
                   opacity 1s;
 
       @media #{$lg-up} {
+        float: left;
         width: unset;
-        margin-right: 5%;
-        font-size: $fs-header;
+        margin: 40px 0 0 55%;
       }
     }
 
@@ -172,13 +172,13 @@
       margin-top: 25px;
       text-shadow: 0 0 1px $color-black;
       font-family: $ff-deco;
-      font-size: $fs-header-sm;
+      font-size: $fs-header;
 
       > a {
-        float: right;
-        padding: 8px 25px;
-        margin-right: 200px;
-        border-radius: 8px;
+        float: left;
+        padding: 12px 36px;
+        margin-left: 30%;
+        border-radius: 12px;
         background-color: rgba($color-azure, .5);
         box-shadow: 0 0 5px 1px $color-crystal,
                     inset 0 0 10px 5px $color-crystal;
@@ -189,6 +189,11 @@
                     transform 1s ease .5s,
                     background-color .5s,
                     box-shadow .5s;
+
+        @media #{$md-up} {
+          margin-left: 60%;
+        }
+
         &:hover {
           background-color: rgba($color-crimson, .6);
           box-shadow: 0 0 8px 2px $color-golden,
@@ -232,6 +237,7 @@
     }
 
     &.active.news &__content {
+      max-width: unset;
       transition: transform 1.5s ease-out .5s,
                   text-shadow 1.5s ease .5s,
                   opacity 1s ease .5s;
