@@ -1,4 +1,7 @@
-(function(){
+$(function() {
+  $('.js-cd-timeline').each(initTimeline);
+});
+function initTimeline(){
     // Vertical Timeline - by CodyHouse.co
   function VerticalTimeline( element ) {
     this.element = element;
@@ -68,4 +71,4 @@
     });
     scrolling = false;
   };
-})();
+};
