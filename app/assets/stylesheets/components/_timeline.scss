@@ -199,41 +199,52 @@
   .cd-timeline__content {
     position: relative;
     margin-left: 60px;
+    min-height: 500px;
     background: white;
-    border-radius: 0.25em;
+    border-radius: 10px;
     padding: 1em;
     -webkit-box-shadow: 0 3px 0 #d7e4ed;
             box-shadow: 0 3px 0 #d7e4ed;
-  }
-
-  .cd-timeline__content:after {
-    /* clearfix */
-    content: "";
-    display: table;
-    clear: both;
   }
 
   .cd-timeline__content::before {
     /* triangle next to content block */
     content: '';
     position: absolute;
-    top: 16px;
+    top: 7px;
     right: 100%;
     height: 0;
     width: 0;
-    border: 7px solid transparent;
-    border-right: 7px solid $color-crystal;
+    border: 14px solid transparent;
+    border-right:14px solid $color-lavender;
+  }
+
+  .cd-timeline__content:after {
+    /* clearfix */
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: rgba($color-black, .6);
+    z-index: 0;
   }
 
   .cd-timeline__content h2 {
+    position: relative;
     color: white;
     text-shadow: 0 0 1px black;
+    z-index: 1;
   }
 
   .cd-timeline__content p,
   .cd-timeline__read-more,
   .cd-timeline__date {
+    position: relative;
     font-size: 1.3rem;
+    z-index: 1;
   }
 
   .cd-timeline__content p {
@@ -261,6 +272,8 @@
   }
 
   .cd-timeline__date {
+    position: absolute;
+    bottom: -45px;
     float: left;
     padding: .8em 0;
     opacity: .7;
@@ -289,10 +302,10 @@
               transform: translateZ(0);
     }
     .cd-timeline__content::before {
-      top: 24px;
+      top: 18px;
       left: 100%;
       border-color: transparent;
-      border-left-color: $color-crystal;
+      border-left-color: $color-lavender;
     }
     .cd-timeline__read-more {
       float: left;
@@ -308,11 +321,11 @@
       float: right;
     }
     .cd-timeline__block:nth-child(even) .cd-timeline__content::before {
-      top: 24px;
+      top: 16px;
       left: auto;
       right: 100%;
       border-color: transparent;
-      border-right-color: $color-crystal;
+      border-right-color: $color-lavender;
     }
     .cd-timeline__block:nth-child(even) .cd-timeline__read-more {
       float: right;
