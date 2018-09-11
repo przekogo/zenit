@@ -9,11 +9,13 @@
   background-color: rgba($color-black, .4);
 
   @media #{$lg-up} {
+    align-self: flex-end;
+    max-width: 50vw;
     background-color: unset;
   }
 
   &__wrapper {
-    margin: auto 0;
+    margin: auto 75px auto 0;
   }
 
   &__article {
