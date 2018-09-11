@@ -19,3 +19,9 @@ pl:
       spaces: 'wolne powierzchnie'
       gallery: 'galeria zdjęć'
       blueprint: 'plan budynku'
+  time:
+   formats:
+     long: "%d-%m-%Y %H:%M:%S"
+  news:
+    title: 'Tytuł'
+    content: 'Treść'
