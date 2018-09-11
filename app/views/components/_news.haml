@@ -1,51 +1,10 @@
 .rz-news
   .scrollbar
   .rz-news__wrapper
-    .rz-news__article
-      .title
-        title 1
-      .content
-        %p
-          content content content content content content content content content content content content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 2
-      .content
-        %p
-          content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 3
-      .content
-        %p
-          content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 4
-      .content
-        %p
-          content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 1
-      .content
-        %p
-          content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 2
-      .content
-        %p
-          content content content content content content content content content content content content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 3
-      .content
-        %p
-          content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content
-    .rz-news__article
-      .title
-        title 4
-      .content
-        %p
-          content content content content content content content content content content content
+    -news.each do |n|
+      .rz-news__article
+        .title
+          =n.title
+        .content
+          %p
+            =n.content

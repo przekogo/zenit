@@ -53,4 +53,4 @@
     =render partial: 'components/contact'
   .rz-onepage__page.news.next{'data-link' => 'news'}
     .rz-onepage__page__content
-      =render partial: 'components/news'
+      =render partial: 'components/news', locals: { news: @news }
