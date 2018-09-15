@@ -1,5 +1,4 @@
 ActiveAdmin.register News do
-
   index do
     selectable_column
     id_column
@@ -18,12 +17,8 @@ ActiveAdmin.register News do
 
   show do
     attributes_table do
-      row I18n.t('news.title') do |n|
-        n.title
-      end
-      row I18n.t('news.content') do |n|
-        n.content
-      end
+      row :title
+      row :content
     end
   end
 
