@@ -9,6 +9,8 @@ pl:
         other: 'aktualności'
     attributes:
       admin_user:
+        email: 'e-mail'
+        password: 'hasło'
         current_sign_in_at: 'obecne zalogowanie'
         sign_in_count: 'ilość zalogowań'
         created_at: 'data utworzenia'
@@ -87,9 +89,9 @@ pl:
       update_needs_confirmation: 'Konto zostało zaktualizowane. Niemniej jednak przed wprowadzeniem zmian musimy potwierdzić Twój nowy adres email. Za chwilę wyślemy instrukcję na nowy adres.'
       updated: 'Konto zostało pomyślnie zaktualizowane.'
     sessions:
-      user:
-        signed_in: 'Zostałeś zalogowany.'
-        signed_out: 'Zostałeś wylogowany.'
+      admin_user:
+        signed_in: 'Zalogowano.'
+        signed_out: 'Wylogowano.'
     unlocks:
       send_instructions: 'Za chwilę otrzymasz wiadomość email z instrukcją jak odblokować konto.'
       send_paranoid_instructions: 'Jeżeli Twoje konto istnieje, otrzymasz wiadomość emial z instrukcją jak odblokować konto.'
@@ -109,3 +111,9 @@ pl:
       predicates:
         from: 'od'
         to: 'do'
+    devise:
+      email:
+        title: 'e-mail'
+      password:
+        title: 'hasło'
+

@@ -49,4 +49,16 @@
       }
     }
   }
+
+  .fb-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 $color-lavender;
+    transition: box-shadow .3s;
+
+    &:hover {
+      box-shadow: 0 0 7px $color-azure;
+    }
+  }
 }
