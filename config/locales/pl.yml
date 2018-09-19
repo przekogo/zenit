@@ -116,4 +116,7 @@ pl:
         title: 'e-mail'
       password:
         title: 'hasło'
+    search_status:
+      headline: "Status wyszukiwania:"
+      current_filters: 'Aktywne filtry:'
 
