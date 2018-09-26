@@ -1,5 +1,7 @@
 class SpacesController < ApplicationController
-def index ; end
+def index
+  @buildings = Building.includes(:spaces).order('spaces.available')
+end
 
   def fetch
     respond_to do |format|

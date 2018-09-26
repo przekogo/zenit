@@ -7,6 +7,12 @@ pl:
       news:
         one: 'aktualność'
         other: 'aktualności'
+      building:
+        one: 'budynek'
+        other: 'budynki'
+      space:
+        one: 'powierzchia'
+        other: 'powierzchnie'
     attributes:
       admin_user:
         email: 'e-mail'
@@ -23,6 +29,23 @@ pl:
         content: 'treść'
         created_at: 'data utworzenia'
         updated_at: 'ostatnia aktualizacja'
+      space:
+        building: 'budynek'
+        floor: 'piętro'
+        available: 'dostępna'
+        total: 'całkowita'
+    errors:
+      models:
+        space:
+          attributes:
+            building:
+              required: 'Proszę wybrać budyek z listy'
+            floor:
+              blank: 'Pole nie może być puste'
+            available:
+              blank: 'Pole nie może być puste'
+            total:
+              blank: 'Pole nie może być puste'
   buildings:
     lotus:
       name: 'Azure Lotus'
