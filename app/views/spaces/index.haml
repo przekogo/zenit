@@ -11,7 +11,7 @@
           Poziom
           - building.spaces.each do |space|
             .level
-              = space.floor
+              = space.floor == 0 ? 0 : RomanNumerals.to_roman(space.floor)
         .title
           Metraż
           - building.spaces.each do |space|

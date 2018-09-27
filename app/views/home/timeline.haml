@@ -2,66 +2,11 @@
 .zen-container.full-width
   %section.cd-timeline.js-cd-timeline
     .cd-timeline__container
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2008", :src => "assets/2008-orchid.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2008-orchid.jpg') center no-repeat;background-size: cover"}
-          %h2 Golden Orchid 2008
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii
-          %span.cd-timeline__date 2008
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2008", :src => "assets/2008-orchid-2.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2008-orchid-2.jpg') center no-repeat;background-size: cover"}
-          %h2 Golden Orchid 2008
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii
-          %span.cd-timeline__date 2008
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2003", :src => "assets/2003-rose.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2003-rose.jpg') center no-repeat;background-size: cover"}
-          %h2 Crimson Rose 2003
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii
-          %span.cd-timeline__date 2003
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2003", :src => "assets/2003-orchid.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2003-orchid.jpg') center no-repeat;background-size: cover"}
-          %h2 Golden Orchid 2003
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii
-          %span.cd-timeline__date 2003
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2003", :src => "assets/2003-rose-1.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2003-rose-1.jpg') center no-repeat;background-size: cover"}
-          %h2 Crimson Rose 2003
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii
-          %span.cd-timeline__date 2003
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2003", :src => "assets/2003-orchid-1.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2003-orchid-1.jpg') center no-repeat;background-size: cover"}
-          %h2 Golden Orchid 2003
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii;'}
-          %span.cd-timeline__date 2003
-      .cd-timeline__block.js-cd-block
-        .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: "2003", :src => "assets/2003-orchid-2.jpg"}/
-        / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/2003-orchid-2.jpg') center no-repeat;background-size: cover"}
-          %h2 Golden Orchid 2003
-          %p
-            W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii;'}
-          %span.cd-timeline__date 2003
+      = render_haml timeline_entry('lily-1.jpg', 2018, 'Crystal Lily 2018', 'history.2018')
+      = render_haml timeline_entry('rose-3.jpg', 2017, 'Crimson Rose 2017', 'history.2017')
+      = render_haml timeline_entry('2008-orchid-2.jpg', 2008, 'Golden Orchid 2008', 'history.2008')
+      = render_haml timeline_entry('2003-rose.jpg', 2004, 'Crimson Rose 2004', 'history.2004')
+      = render_haml timeline_entry('XXw.jpg', 'II poł. XXw.', 'Druga połowa XXw.', 'history.1950s')
+      = render_haml timeline_entry('1919-zenit.jpg', 1919, 'Zakłady pończosznicze 1919', 'history.1919')
+      = render_haml timeline_entry('1885-zenit.jpg', 1885, 'Fabryka Winklera 1885', 'history.1885')
+

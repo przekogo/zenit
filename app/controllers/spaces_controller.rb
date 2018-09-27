@@ -1,6 +1,6 @@
 class SpacesController < ApplicationController
 def index
-  @buildings = Building.includes(:spaces).order('spaces.available')
+  @buildings = Building.includes(:spaces).order('spaces.floor')
 end
 
   def fetch
