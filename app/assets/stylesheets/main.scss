@@ -63,3 +63,11 @@ a {
 .hidden {
   display: none;
 }
+
+.rz-hide-md {
+  display: none;
+
+  @media #{$lg-up} {
+    display: block;
+  }
+}
