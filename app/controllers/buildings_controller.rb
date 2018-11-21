@@ -1,5 +1,7 @@
 class BuildingsController < ApplicationController
-  def index ; end
+  def index
+    @buildings = Building.includes(:spaces).order('spaces.floor')
+  end
 
   def lotus
     render 'building', locals: {building: 'Azure Lotus'}

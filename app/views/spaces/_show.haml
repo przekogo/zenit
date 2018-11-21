@@ -1,36 +1,44 @@
 .zen-spaces
   .zen-spaces__title.segment
-    = t "buildings.#{building}.name"
+    = building.name
   .zen-spaces__row.segment
     .zen-spaces__header
       poziom
     .zen-spaces__header
       wolna powierzchnia
-  .zen-spaces__row.segment
-    .zen-spaces__level
-      0
-    .zen-spaces__surface
-      \-
-  .zen-spaces__row.segment
-    .zen-spaces__level
-      1
-    .zen-spaces__surface
-      25m
-      %sup> 2
-  .zen-spaces__row.segment
-    .zen-spaces__level
-      2
-    .zen-spaces__surface
-      420m
-      %sup> 2
-  .zen-spaces__row.segment
-    .zen-spaces__level
-      3
-    .zen-spaces__surface
-      25m
-      %sup> 2
-      , 45m
-      %sup> 2
+  - building.spaces.each do |space|
+    .zen-spaces__row.segment
+      .zen-space__level
+        = space.floor
+      .zen-spaces__surface
+        = "#{space.available}m"
+        %sup> 2
+
+  / .zen-spaces__row.segment
+  /   .zen-spaces__level
+  /     0
+  /   .zen-spaces__surface
+  /     \-
+  / .zen-spaces__row.segment
+  /   .zen-spaces__level
+  /     1
+  /   .zen-spaces__surface
+  /     25m
+  /     %sup> 2
+  / .zen-spaces__row.segment
+  /   .zen-spaces__level
+  /     2
+  /   .zen-spaces__surface
+  /     420m
+  /     %sup> 2
+  / .zen-spaces__row.segment
+  /   .zen-spaces__level
+  /     3
+  /   .zen-spaces__surface
+  /     25m
+  /     %sup> 2
+  /     , 45m
+  /     %sup> 2
   .zen-spaces__features
     -if ['lily', 'lotus', 'iris'].include? building
       Budynek w przebudowie, jednak dla zainteresowanych najmem jesteśmy w stanie udostępnić gotową, niepowtarzalną powierzchnię w uzgodnionym terminie. Zachęcamy do kontaktu. Bądź pierwszym, który zarezerwuje unikalne metry

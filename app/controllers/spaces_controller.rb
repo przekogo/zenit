@@ -4,9 +4,10 @@ def index
 end
 
   def fetch
+    building = Building.where('name LIKE ?', "%#{params[:building].capitalize}").first
     respond_to do |format|
       format.html {
-        render partial: 'spaces/show', locals: { building: params[:building] }
+        render partial: 'spaces/show', locals: { building: building }
       }
     end
   end
