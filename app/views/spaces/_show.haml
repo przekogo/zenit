@@ -6,7 +6,7 @@
       poziom
     .zen-spaces__header
       wolna powierzchnia
-  - building.spaces.each do |space|
+  - building.spaces.order(:floor).each do |space|
     .zen-spaces__row.segment
       .zen-space__level
         = space.floor
