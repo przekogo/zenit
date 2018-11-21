@@ -47,10 +47,12 @@
     -else
       %span
         klimatyzacja
-      %span
-        lobby
-      %span
-        winda
+      - if ['orchid', 'rose'].include? building
+        %span
+          lobby
+      - if ['orchid', 'lily'].include? building
+        %span
+          winda
       %span
         parking
       %span
