@@ -9,13 +9,14 @@ module ApplicationHelper
         .cd-timeline__img.cd-timeline__img--picture.js-cd-img
           %img{alt: time, :src => "assets/#{image}"}/
         / cd-timeline__img
-        .cd-timeline__content.js-cd-content{style: "background: url('assets/#{image}') center no-repeat;background-size: cover"}
-          %h2
-            = title
-          %p
-            = I18n.t(content)
-          %span.cd-timeline__date
-            = time
+        .cd-timeline__content.collapsed.js-cd-content{style: "background: url('assets/#{image}') center no-repeat;background-size: cover"}
+          .content-text
+            %h2
+              = title
+            %p
+              = I18n.t(content)
+        %span.cd-timeline__date
+          = time
       HAML
   end
 end

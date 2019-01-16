@@ -1,5 +1,8 @@
 $(function() {
   $('.js-cd-timeline').each(initTimeline);
+  $(document).on('click', '.cd-timeline__content', function() {
+    $(this).toggleClass('collapsed');
+  });
 });
 function initTimeline(){
     // Vertical Timeline - by CodyHouse.co
