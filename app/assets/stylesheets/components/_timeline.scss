@@ -368,7 +368,7 @@
 
   @media only screen and (min-width: 1170px) {
     /* inverse bounce effect on even content blocks */
-    .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
+    .cd-timeline__block .cd-timeline__content.cd-timeline__content--bounce-in {
       -webkit-animation: cd-bounce-2-inverse 0.6s;
               animation: cd-bounce-2-inverse 0.6s;
     }

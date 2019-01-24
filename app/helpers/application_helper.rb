@@ -7,7 +7,7 @@ module ApplicationHelper
     render_haml <<-HAML, image: image, time: time, title: title, content: content
       .cd-timeline__block.js-cd-block
         .cd-timeline__img.cd-timeline__img--picture.js-cd-img
-          %img{alt: time, :src => "assets/#{image}"}/
+          %img{alt: time, src: "assets/#{image}"}/
         / cd-timeline__img
         .cd-timeline__content.collapsed.js-cd-content{style: "background: url('assets/#{image}') center no-repeat;background-size: cover"}
           .content-text

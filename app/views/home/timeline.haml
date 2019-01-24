@@ -2,11 +2,12 @@
 .zen-container.full-width
   %section.cd-timeline.js-cd-timeline
     .cd-timeline__container
+      = render_haml timeline_entry('iris-rev.jpg', 2019, 'Lavender Iris 2019', 'history.2019')
       = render_haml timeline_entry('lily-1.jpg', 2018, 'Crystal Lily 2018', 'history.2018')
-      = render_haml timeline_entry('rose-3.jpg', 2017, 'Crimson Rose 2017', 'history.2017')
-      = render_haml timeline_entry('2008-orchid-2.jpg', 2008, 'Golden Orchid 2008', 'history.2008')
+      = render_haml timeline_entry('rose-pip.jpg', 2017, 'Crimson Rose 2017', 'history.2017')
+      = render_haml timeline_entry('orchid-pip.jpg', 2008, 'Golden Orchid 2008', 'history.2008')
       = render_haml timeline_entry('2003-rose.jpg', 2004, 'Crimson Rose 2004', 'history.2004')
-      = render_haml timeline_entry('XXw.jpg', 'II poł. XXw.', 'Druga połowa XXw.', 'history.1950s')
-      = render_haml timeline_entry('1919-zenit.jpg', 1919, 'Zakłady pończosznicze 1919', 'history.1919')
-      = render_haml timeline_entry('1885-zenit.jpg', 1885, 'Fabryka Winklera 1885', 'history.1885')
+      = render_haml timeline_entry('books.jpg', 'II poł. XXw.', 'Druga połowa XXw.', 'history.1950s')
+      = render_haml timeline_entry('books.jpg', 1919, 'Zakłady pończosznicze 1919', 'history.1919')
+      = render_haml timeline_entry('books.jpg', 1885, 'Fabryka Winklera 1885', 'history.1885')
 

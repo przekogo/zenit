@@ -11,7 +11,7 @@ function initTimeline(){
     this.blocks = this.element.getElementsByClassName("js-cd-block");
     this.images = this.element.getElementsByClassName("js-cd-img");
     this.contents = this.element.getElementsByClassName("js-cd-content");
-    this.offset = 0.8;
+    this.offset = .9;
     this.hideBlocks();
   };
 

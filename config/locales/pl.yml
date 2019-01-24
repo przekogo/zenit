@@ -67,13 +67,14 @@ pl:
       gallery: 'galeria zdjęć'
       blueprint: 'plan budynku'
   history:
+    '2019': 'Zakończenie rewitalizacji Lavender Iris'
     '2018': 'Kolejny etap rewitalizacji rozpoczęty. Przygotowanie'
     '2017': 'Zakończenie drugiego etapu rewitalizacji - Crimson Rose gotowe do przyjęcia najemców.'
-    '2008': 'Rewitalizacja budynku Golden Orchid zakończone sukcesem.'
+    '2008': 'Rewitalizacja budynku Golden Orchid zakończona sukcesem.'
     '2004': 'Prywatyzacja zakładów państwowych'
     '1950s': 'Zakłady Przemysłu Pończoszniczego im. Mariana Buczka Zenit (upaństwowienie)'
     '1919': 'Remont fabryki Nahum Eitingon nowym właścicielem. Wymiana parku maszynowego.'
-    '1885': 'Fabryka Winklera "Fabryka Pończosznicza Towarzystwa Akcyjnego Winkler Gaertner Borman"'
+    '1885': 'Powstanie zakładów fabryki Winklera "Fabryka Pończosznicza Towarzystwa Akcyjnego Winkler Gaertner Borman"'
   time:
    formats:
      long: "%d-%m-%Y %H:%M:%S"
